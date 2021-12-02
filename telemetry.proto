@@ -1,5 +1,6 @@
 syntax = "proto2";
 
+package com.algolia.instantsearch.telemetry;
 
 // serial name 'com.algolia.instantsearch.telemetry.Schema'
 message Schema {
