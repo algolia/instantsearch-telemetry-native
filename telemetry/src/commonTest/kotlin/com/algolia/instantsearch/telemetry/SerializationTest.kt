@@ -7,32 +7,23 @@ import com.algolia.instantsearch.telemetry.ComponentParam.SelectionMode
 import com.algolia.instantsearch.telemetry.ComponentType.FacetList
 import com.algolia.instantsearch.telemetry.ComponentType.HitsSearcher
 import kotlinx.serialization.decodeFromByteArray
-import kotlinx.serialization.encodeToByteArray
+import kotlinx.serialization.encodeToHexString
 import kotlinx.serialization.protobuf.ProtoBuf
 import kotlin.test.Test
 import kotlin.test.assertEquals
-import kotlinx.serialization.protobuf.schema.ProtoBufSchemaGenerator
 
 class SerializationTest {
 
     @Test
     fun serializationTest() {
         val telemetry = Telemetry()
-        telemetry.trace(FacetList, setOf(Facets, SelectionMode))
         telemetry.trace(HitsSearcher, setOf(Client, IndexName))
-        val schema = telemetry.schema()
-        val bytes = ProtoBuf.encodeToByteArray(schema)
+        telemetry.traceConnector(FacetList, setOf(Facets, SelectionMode))
+        val schema = telemetry.schema() ?: error("schema should not be empty")
+        val bytes = schema.toByteArray()
         val decoded = ProtoBuf.decodeFromByteArray<Schema>(bytes)
-
-        val hex = "{E2}+{0C}{C0}%{08}{C8}%{07}{C8}%{18}{D0}%{00}{E2}+{0C}{C0}%{01}{C8}%{06}{C8}%{0D}{D0}%{00}"
-        assertEquals(hex, bytes.toAsciiHexString())
+        val hex = "e22b0cc02501c82506c8250dd02500e22b0cc02508c82507c82518d02501"
+        assertEquals(hex, ProtoBuf.encodeToHexString(Schema.serializer(), schema))
         assertEquals(schema, decoded)
-    }
-
-    private fun ByteArray.toAsciiHexString() = joinToString("") {
-        when (it) {
-            in 32..127 -> it.toInt().toChar().toString()
-            else -> "{${it.toUByte().toString(16).padStart(2, '0').uppercase()}}"
-        }
     }
 }
