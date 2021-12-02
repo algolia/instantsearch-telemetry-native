@@ -1,9 +1,6 @@
-@file:OptIn(ExperimentalSerializationApi::class)
-
 package com.algolia.instantsearch.telemetry.generator
 
 import com.algolia.instantsearch.telemetry.Schema
-import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.protobuf.schema.ProtoBufSchemaGenerator
 import java.io.File
 
