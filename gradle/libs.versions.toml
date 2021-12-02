@@ -1,0 +1,12 @@
+[versions]
+serialization = "1.2.2"
+
+[libraries]
+# kotlin
+kotlinx-serialization-protobuf = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-protobuf", version.ref = "serialization" }
+
+# test
+test-kotlin-common = { module = "org.jetbrains.kotlin:kotlin-test-common" }
+test-kotlin-annotations = { module = "org.jetbrains.kotlin:kotlin-test-annotations-common" }
+test-kotlin-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit" }
+
