@@ -45,5 +45,11 @@ public enum class ComponentParam {
     @ProtoNumber(36) GroupIDs,
     @ProtoNumber(37) RequestOptions,
     @ProtoNumber(38) FacetsQuery,
+    @ProtoNumber(39) Filters,
+    @ProtoNumber(40) NumericOperator,
+    @ProtoNumber(41) Selected,
+    @ProtoNumber(42) FilterStateParameter,
+    @ProtoNumber(43) HitsSearcherParameter,
+    @ProtoNumber(44) FacetSearcherParameter,
     // @formatter:on
 }

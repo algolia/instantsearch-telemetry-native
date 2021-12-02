@@ -34,3 +34,7 @@ subprojects {
 tasks.register<Delete>("clean") {
     delete(rootProject.buildDir)
 }
+
+tasks.register<Copy>("generate") {
+    dependsOn(":generator:run")
+}
