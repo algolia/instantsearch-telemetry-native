@@ -1,5 +1,5 @@
 [versions]
-serialization = "1.2.2"
+serialization = "1.3.0"
 
 [libraries]
 # kotlin
@@ -9,4 +9,3 @@ kotlinx-serialization-protobuf = { group = "org.jetbrains.kotlinx", name = "kotl
 test-kotlin-common = { module = "org.jetbrains.kotlin:kotlin-test-common" }
 test-kotlin-annotations = { module = "org.jetbrains.kotlin:kotlin-test-annotations-common" }
 test-kotlin-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit" }
-
