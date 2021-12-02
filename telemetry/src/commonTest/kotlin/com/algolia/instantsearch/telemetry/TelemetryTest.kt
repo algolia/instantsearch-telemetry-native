@@ -10,7 +10,6 @@ import com.algolia.instantsearch.telemetry.ComponentType.HitsSearcher
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
-@OptIn(Internal::class)
 class TelemetryTest {
 
     @Test
