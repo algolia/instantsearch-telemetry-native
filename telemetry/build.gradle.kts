@@ -12,7 +12,6 @@ kotlin {
             languageSettings {
                 optIn("kotlin.RequiresOptIn")
                 optIn("kotlinx.serialization.ExperimentalSerializationApi")
-                optIn("com.algolia.instantsearch.Internal")
             }
         }
         val commonMain by getting {

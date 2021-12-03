@@ -10,7 +10,6 @@ import com.algolia.instantsearch.telemetry.ComponentType.HitsSearcher
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
-@OptIn(Internal::class)
 class TelemetryTest {
 
     @Test
@@ -23,7 +22,7 @@ class TelemetryTest {
         val schema = telemetry.schema()
         assertEquals(2, schema?.components?.size)
         assertEquals(1, schema?.components?.count { it.type == HitsSearcher })
-        assertEquals(2, schema?.components?.first { it.type == HitsSearcher }?.parameters?.size)
+        assertEquals(3, schema?.components?.first { it.type == HitsSearcher }?.parameters?.size)
         assertEquals(true, schema?.components?.first { it.type == HitsSearcher }?.isConnector)
     }
 }

@@ -4,12 +4,10 @@ buildscript {
     val kotlinVersion by extra("1.5.31")
     repositories {
         mavenCentral()
-        google()
     }
     dependencies {
         classpath(kotlin("gradle-plugin", version = kotlinVersion))
         classpath(kotlin("serialization", version = kotlinVersion))
-        classpath("com.android.tools.build:gradle:7.0.3")
         classpath("com.vanniktech:gradle-maven-publish-plugin:0.18.0")
         classpath("com.diffplug.spotless:spotless-plugin-gradle:5.15.0")
     }
@@ -19,7 +17,6 @@ subprojects {
     apply(plugin = "com.diffplug.spotless")
     repositories {
         mavenCentral()
-        google()
     }
     configure<SpotlessExtension> {
         kotlin {
@@ -33,4 +30,8 @@ subprojects {
 
 tasks.register<Delete>("clean") {
     delete(rootProject.buildDir)
+}
+
+tasks.register<Copy>("generate") {
+    dependsOn(":generator:run")
 }
