@@ -32,6 +32,6 @@ tasks.register<Delete>("clean") {
     delete(rootProject.buildDir)
 }
 
-tasks.register<Copy>("generate") {
+tasks.register("generate") {
     dependsOn(":generator:run")
 }
