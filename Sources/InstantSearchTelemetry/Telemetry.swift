@@ -16,7 +16,7 @@ public typealias TelemetrySchema = Com_Algolia_Instantsearch_Telemetry_Schema
 public class InstantSearchTelemetry {
   
   /// Shared telemetry tracking instance
-  static let shared = InstantSearchTelemetry()
+  public static let shared = InstantSearchTelemetry()
   
   /// Is telemetry tracking on
   public var isOn: Bool = true
@@ -45,6 +45,16 @@ public class InstantSearchTelemetry {
       return nil
     }
     return telemetryDataString
+  }
+  
+  /// Remove all collected telemetry data
+  public func reset() {
+    components.removeAll()
+  }
+  
+  /// Get component of the provided type
+  public func component(ofType type: TelemetryComponentType) -> TelemetryComponent? {
+    return components[type]
   }
   
   public func traceConnector(type: TelemetryComponentType,

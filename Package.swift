@@ -4,11 +4,11 @@
 import PackageDescription
 
 let package = Package(
-    name: "instantsearch-telemetry-native",
+    name: "InstantSearchTelemetry",
     products: [
         .library(
-            name: "Telemetry",
-            targets: ["instantsearch-telemetry-native"]),
+            name: "InstantSearchTelemetry",
+            targets: ["InstantSearchTelemetry"]),
     ],
     dependencies: [
       .package(name: "SwiftProtobuf",
@@ -20,10 +20,10 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "instantsearch-telemetry-native",
+            name: "InstantSearchTelemetry",
             dependencies: ["SwiftProtobuf", "Gzip"]),
         .testTarget(
-            name: "instantsearch-telemetry-nativeTests",
-            dependencies: ["instantsearch-telemetry-native"]),
+            name: "InstantSearchTelemetryTests",
+            dependencies: ["InstantSearchTelemetry"]),
     ]
 )
