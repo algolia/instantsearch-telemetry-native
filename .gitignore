@@ -17,3 +17,7 @@ local.settings.gradle.kts
 # bitrise
 .bitrise.yml
 bitrise.yml
+
+# spm
+.swiftpm/
+Package.resolved
