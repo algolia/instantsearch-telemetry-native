@@ -50,7 +50,10 @@ jobs:
           then
             git add Sources/InstantSearchTelemetry/telemetry.pb.swift
           fi
-          git commit -m 'chore: update generated specs'
-          git push
+          if [ -n "$(git status --porcelain)" ]; then
+            git commit -m 'chore: update generated specs'
+            git push
+          fi
+
 
 
