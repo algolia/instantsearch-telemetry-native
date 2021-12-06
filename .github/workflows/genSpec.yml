@@ -34,10 +34,5 @@ jobs:
         run: |
           ls ${{ github.workspace }}
 
-      - name: Generate protobuf specification
-        uses: eskatos/gradle-command-action@v1
-        with:
-          arguments: generate
-          distributions-cache-enabled: true
-          dependencies-cache-enabled: true
-          configuration-cache-enabled: true
+      - name: Generate specification and Swift code
+        run: make generate
