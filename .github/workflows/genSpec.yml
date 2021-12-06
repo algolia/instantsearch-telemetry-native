@@ -39,3 +39,18 @@ jobs:
 
       - name: Generate specification and Swift code
         run: make generate
+
+      - name: Add specification and Swift files if needed
+        run: |
+          if [ -z `git diff telemetry.proto` ]
+          then
+            git add telemetry.proto
+          fi
+          if [ - z `git diff Sources/InstantSearchTelemetry/telemetry.pb.swift`] 
+          then
+            git add Sources/InstantSearchTelemetry/telemetry.pb.swift
+          fi
+          git commit -m 'update generated specs'
+          git push
+
+
