@@ -18,8 +18,8 @@ public class InstantSearchTelemetry {
   /// Shared telemetry tracking instance
   public static let shared = InstantSearchTelemetry()
   
-  /// Is telemetry tracking on
-  public var isOn: Bool = true
+  /// Whether the telemetry tracing is enabled
+  public var isEnabled: Bool = true
   
   /// Dictionary mapping a component to its type, ensuring each component is tracked only once
   var components: [TelemetryComponentType: TelemetryComponent] = [:] {
@@ -38,7 +38,7 @@ public class InstantSearchTelemetry {
   
   /// Telemetry information encoded as  base64 gzipped string
   public var encodedValue: String? {
-    guard isOn else {
+    guard isEnabled else {
       return nil
     }
     guard let telemetryDataString = try? schema.serializedData().gzipped().base64EncodedString() else {
@@ -99,7 +99,7 @@ public class InstantSearchTelemetry {
   private func trace(type: TelemetryComponentType,
                      parameters: [TelemetryComponentParams],
                      isConnector: Bool) {
-    guard isOn else { return }
+    guard isEnabled else { return }
     
     let isExistingComponentConnector: Bool
     let existingComponentParameters: [TelemetryComponentParams]
