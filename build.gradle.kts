@@ -1,5 +1,3 @@
-import com.diffplug.gradle.spotless.SpotlessExtension
-
 buildscript {
     val kotlinVersion by extra("1.5.31")
     repositories {
@@ -13,18 +11,9 @@ buildscript {
     }
 }
 
-subprojects {
-    apply(plugin = "com.diffplug.spotless")
+allprojects {
     repositories {
         mavenCentral()
-    }
-    configure<SpotlessExtension> {
-        kotlin {
-            target("**/*.kt")
-            ktlint("0.43.0")
-            trimTrailingWhitespace()
-            endWithNewline()
-        }
     }
 }
 
