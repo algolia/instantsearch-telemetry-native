@@ -50,6 +50,7 @@ jobs:
           then
             git add Sources/InstantSearchTelemetry/telemetry.pb.swift
           fi
+          echo "test"
           if [ -n "$(git status --porcelain)" ]; then
             git commit -m 'chore: update generated specs'
             git push origin HEAD:${GITHUB_REF##*/}
