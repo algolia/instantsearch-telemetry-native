@@ -46,11 +46,11 @@ jobs:
              then
                git add Sources/InstantSearchTelemetry/telemetry.pb.swift
              fi
-             echo "test"
-             if [ -n "$(git status --porcelain)" ]; then
-               git commit -m 'chore: update generated specs'
-               git push
-             fi
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
 
 
 
