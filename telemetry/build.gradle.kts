@@ -1,12 +1,16 @@
+import com.diffplug.gradle.spotless.SpotlessExtension
+
 plugins {
     kotlin("multiplatform")
     id("kotlinx-serialization")
     id("com.vanniktech.maven.publish")
+    id("com.diffplug.spotless")
 }
 
 kotlin {
     explicitApi()
     jvm()
+    ios()
     sourceSets {
         all {
             languageSettings {
@@ -30,5 +34,14 @@ kotlin {
                 implementation(libs.test.kotlin.junit)
             }
         }
+    }
+}
+
+configure<SpotlessExtension> {
+    kotlin {
+        target("**/*.kt")
+        ktlint("0.43.0")
+        trimTrailingWhitespace()
+        endWithNewline()
     }
 }

@@ -13,18 +13,9 @@ buildscript {
     }
 }
 
-subprojects {
-    apply(plugin = "com.diffplug.spotless")
+allprojects {
     repositories {
         mavenCentral()
-    }
-    configure<SpotlessExtension> {
-        kotlin {
-            target("**/*.kt")
-            ktlint("0.43.0")
-            trimTrailingWhitespace()
-            endWithNewline()
-        }
     }
 }
 
