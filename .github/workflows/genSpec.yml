@@ -20,11 +20,19 @@ jobs:
           repository: apple/swift-protobuf
           ref: 1.18.0
 
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+
       - name: Build Swift Protobuf
         run: swift build
 
       - name: Checkout
         uses: actions/checkout@v2
+
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
 
       - name: Generate protobuf specification
         uses: eskatos/gradle-command-action@v1
