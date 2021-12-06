@@ -33,28 +33,24 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
-
       - name: Generate specification and Swift code
         run: make generate
 
       - name: Add specification and Swift files if needed
         run: |
-          if [ ! -z "`git diff telemetry.proto`" ]
-          then
-            git add telemetry.proto
-          fi
-          if [ ! -z "`git diff Sources/InstantSearchTelemetry/telemetry.pb.swift`" ] 
-          then
-            git add Sources/InstantSearchTelemetry/telemetry.pb.swift
-          fi
-          echo "test"
-          if [ -n "$(git status --porcelain)" ]; then
-            git commit -m 'chore: update generated specs'
-            git push origin HEAD:$GITHUB_REF
-          fi
+             if [ ! -z "`git diff telemetry.proto`" ]
+             then
+               git add telemetry.proto
+             fi
+             if [ ! -z "`git diff Sources/InstantSearchTelemetry/telemetry.pb.swift`" ] 
+             then
+               git add Sources/InstantSearchTelemetry/telemetry.pb.swift
+             fi
+             echo "test"
+             if [ -n "$(git status --porcelain)" ]; then
+               git commit -m 'chore: update generated specs'
+               git push
+             fi
 
 
 
