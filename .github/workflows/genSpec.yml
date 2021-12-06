@@ -52,7 +52,7 @@ jobs:
           fi
           if [ -n "$(git status --porcelain)" ]; then
             git commit -m 'chore: update generated specs'
-            git push
+            git push origin HEAD:${GITHUB_REF##*/}
           fi
 
 
