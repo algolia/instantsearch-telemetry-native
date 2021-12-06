@@ -7,7 +7,7 @@ import java.io.File
 fun main() {
     val proto = ProtoBufSchemaGenerator.generateSchemaText(
         rootDescriptor = Schema.serializer().descriptor,
-        packageName = Schema::class.java.packageName
+        packageName = "com.algolia.instantsearch.telemetry"
     )
     val fileName = "telemetry.proto"
     val protoFile = File(fileName)
