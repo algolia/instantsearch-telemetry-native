@@ -51,6 +51,5 @@ public enum class ComponentParam {
     @ProtoNumber(42) FilterStateParameter,
     @ProtoNumber(43) HitsSearcherParameter,
     @ProtoNumber(44) FacetSearcherParameter,
-    @ProtoNumber(45) TestGeneration,
     // @formatter:on
 }
