@@ -1,0 +1,61 @@
+# .github/workflows/runOnGitHub.yml
+# GitHub Actions documentation
+# => https://docs.github.com/en/actions
+name: runOnGitHub
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+jobs:
+  gradle:
+    runs-on: macos-latest
+    steps:
+      # - name: Checkout Swift Protobuf
+      #   uses: actions/checkout@v2
+      #   with:
+      #     repository: apple/swift-protobuf
+      #     ref: 1.18.0
+
+      # - name: List files in the repository
+      #   run: |
+      #     ls ${{ github.workspace }}
+
+      # - name: Build Swift Protobuf
+      #   run: swift build -c release
+
+      - name: Install Swift Protobuf
+        run: brew install swift-protobuf
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Checkout PR
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh pr checkout ${{ github.event.pull_request.number }}
+
+      - name: Generate specification and Swift code
+        run: make generate
+
+      - name: Add specification and Swift files if needed
+        run: |
+             if [ ! -z "`git diff telemetry.proto`" ]
+             then
+               git add telemetry.proto
+             fi
+             if [ ! -z "`git diff Sources/InstantSearchTelemetry/telemetry.pb.swift`" ] 
+             then
+               git add Sources/InstantSearchTelemetry/telemetry.pb.swift
+             fi
+
+      - name: Push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: git push
+
+
+
