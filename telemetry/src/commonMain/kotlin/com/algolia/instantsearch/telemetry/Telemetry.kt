@@ -8,6 +8,11 @@ import com.algolia.instantsearch.telemetry.internal.DefaultTelemetry
 public interface Telemetry {
 
     /**
+     * Flag to enable/disable telemetry tracing.
+     */
+    public var enabled: Boolean
+
+    /**
      * Get telemetry [Schema].
      * Returns `null` is telemetry is not [enabled].
      */
@@ -30,9 +35,9 @@ public interface Telemetry {
     )
 
     /**
-     * Flag to enable/disable telemetry tracing.
+     * Clear and remove all components traces.
      */
-    public var enabled: Boolean
+    public fun clear()
 }
 
 /**
