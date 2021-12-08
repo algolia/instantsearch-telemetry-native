@@ -16,14 +16,16 @@ internal class DefaultTelemetry : Telemetry {
 
     override fun trace(componentType: ComponentType, componentParams: Set<ComponentParam>) {
         if (!enabled) return
-        if (telemetryComponents[componentType]?.isConnector == true) return
-        telemetryComponents[componentType] = DataContainer(componentParams, false)
+        val current = telemetryComponents[componentType]
+        val params = mergeParams(current, componentParams)
+        val isConnector = current?.isConnector ?: false
+        telemetryComponents[componentType] = DataContainer(params, isConnector)
     }
 
     override fun traceConnector(componentType: ComponentType, componentParams: Set<ComponentParam>) {
         if (!enabled) return
-        val dataContainer = telemetryComponents[componentType]
-        val params = if (dataContainer?.isConnector == false) dataContainer.params + componentParams else componentParams
+        val current = telemetryComponents[componentType]
+        val params = mergeParams(current, componentParams)
         telemetryComponents[componentType] = DataContainer(params, true)
     }
 
@@ -33,6 +35,15 @@ internal class DefaultTelemetry : Telemetry {
             Component(type, data.params, data.isConnector)
         }
         return Schema(componentsList)
+    }
+
+    override fun clear() {
+        telemetryComponents.clear()
+    }
+
+    private fun mergeParams(current: DataContainer?, componentParams: Set<ComponentParam>): Set<ComponentParam> {
+        if (current == null) return componentParams
+        return componentParams + current.params
     }
 
     private data class DataContainer(val params: Set<ComponentParam>, val isConnector: Boolean)
