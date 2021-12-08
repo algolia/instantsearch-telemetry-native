@@ -5,12 +5,7 @@ import com.algolia.instantsearch.telemetry.internal.DefaultTelemetry
 /**
  * Controller to handle components telemetry operations.
  */
-public interface Telemetry {
-
-    /**
-     * Flag to enable/disable telemetry tracing.
-     */
-    public var enabled: Boolean
+public interface Telemetry : Opt {
 
     /**
      * Get telemetry [Schema].
