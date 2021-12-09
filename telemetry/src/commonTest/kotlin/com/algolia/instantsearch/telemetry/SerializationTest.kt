@@ -16,9 +16,9 @@ class SerializationTest {
 
     @Test
     fun serializationTest() {
-        Telemetry.trace(HitsSearcher, setOf(Client, IndexName))
-        Telemetry.traceConnector(FacetList, setOf(Facets, SelectionMode))
-        val schema = Telemetry.schema() ?: error("schema should not be empty")
+        Telemetry.shared.trace(HitsSearcher, setOf(Client, IndexName))
+        Telemetry.shared.traceConnector(FacetList, setOf(Facets, SelectionMode))
+        val schema = Telemetry.shared.schema() ?: error("schema should not be empty")
         val bytes = schema.toByteArray()
         val decoded = ProtoBuf.decodeFromByteArray<Schema>(bytes)
         val hex = "e22b0cc02501c82506c8250dd02500e22b0cc02508c82507c82518d02501"
