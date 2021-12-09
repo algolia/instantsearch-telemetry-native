@@ -5,7 +5,7 @@ import com.algolia.instantsearch.telemetry.internal.DefaultTelemetry
 /**
  * Controller to handle components telemetry operations.
  */
-public interface Telemetry : Opt {
+public interface Telemetry : Config {
 
     /**
      * Get telemetry [Schema].
@@ -33,6 +33,15 @@ public interface Telemetry : Opt {
      * Clear and remove all components traces.
      */
     public fun clear()
+
+
+    public companion object {
+
+        /**
+         * The default instance of [Telemetry].
+         */
+        public val shared: Telemetry = Telemetry()
+    }
 }
 
 /**
