@@ -14,12 +14,11 @@ class TelemetryTest {
 
     @Test
     fun schemaBuildTest() {
-        val telemetry = Telemetry()
-        telemetry.traceConnector(FacetList, setOf(Facets, SelectionMode))
-        telemetry.trace(HitsSearcher, setOf(Client, IndexName, Undefined))
-        telemetry.traceConnector(HitsSearcher, setOf(Client, IndexName))
+        Telemetry.traceConnector(FacetList, setOf(Facets, SelectionMode))
+        Telemetry.trace(HitsSearcher, setOf(Client, IndexName, Undefined))
+        Telemetry.traceConnector(HitsSearcher, setOf(Client, IndexName))
 
-        val schema = telemetry.schema()
+        val schema = Telemetry.schema()
         assertEquals(2, schema?.components?.size)
         assertEquals(1, schema?.components?.count { it.type == HitsSearcher })
         assertEquals(3, schema?.components?.first { it.type == HitsSearcher }?.parameters?.size)

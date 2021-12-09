@@ -34,7 +34,10 @@ public interface Telemetry : Config {
      */
     public fun clear()
 
-    public companion object
+    /**
+     * The default instance of [Telemetry].
+     */
+    public companion object : Telemetry by Telemetry()
 }
 
 /**
