@@ -1,9 +1,9 @@
 package com.algolia.instantsearch.telemetry
 
 /**
- * Flags to Opt-(in/out).
+ * Telemetry configuration.
  */
-public interface Opt {
+public interface Config {
 
     /**
      * Flag to enable/disable telemetry operations.

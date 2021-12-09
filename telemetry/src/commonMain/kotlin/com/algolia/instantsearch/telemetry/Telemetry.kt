@@ -5,7 +5,7 @@ import com.algolia.instantsearch.telemetry.internal.DefaultTelemetry
 /**
  * Controller to handle components telemetry operations.
  */
-public interface Telemetry : Opt {
+public interface Telemetry : Config {
 
     /**
      * Get telemetry [Schema].
