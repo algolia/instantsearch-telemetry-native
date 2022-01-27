@@ -20,6 +20,11 @@ final class TelemetryTests: XCTestCase {
     XCTAssertEqual(schema, decodedSchema)
   }
   
+  func testInitWithString() throws {
+    let string = "H4sIAAAAAAAAE3ukzXNAVfCEKt8JVZkLqgyPtNkOqIpcUGUEAJ/elTUYAAAA"
+    let _ = try TelemetrySchema(gzippedBase64String: string)
+  }
+  
   func testOptOut() throws {
     let telemetry = InstantSearchTelemetry.shared
     

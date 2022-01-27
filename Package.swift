@@ -15,6 +15,9 @@ let package = Package(
         .library(
             name: "InstantSearchTelemetry",
             targets: ["InstantSearchTelemetry"]),
+        .executable(
+          name: "Parser",
+          targets: ["TelemetryParser"])
     ],
     dependencies: [
       .package(name: "SwiftProtobuf",
@@ -22,14 +25,27 @@ let package = Package(
                from: "1.6.0"),
       .package(name: "Gzip",
                url: "https://github.com/1024jp/GzipSwift",
-               from: "5.1.0")
+               from: "5.1.0"),
+      .package(name: "swift-argument-parser",
+               url: "https://github.com/apple/swift-argument-parser",
+               from: "1.0.0"),
     ],
     targets: [
         .target(
             name: "InstantSearchTelemetry",
             dependencies: ["SwiftProtobuf", "Gzip"]),
+        .executableTarget(
+            name: "TelemetryParser",
+            dependencies: [
+              .product(name: "SwiftProtobuf",
+                       package: "SwiftProtobuf"),
+              .product(name: "ArgumentParser",
+                       package: "swift-argument-parser"),
+              .targetItem(name: "InstantSearchTelemetry",
+                          condition: .none)
+            ]),
         .testTarget(
             name: "InstantSearchTelemetryTests",
-            dependencies: ["InstantSearchTelemetry"]),
+            dependencies: ["InstantSearchTelemetry", "TelemetryParser"]),
     ]
 )
