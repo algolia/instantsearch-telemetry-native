@@ -11,7 +11,7 @@ import InstantSearchTelemetry
 
 struct Decode: ParsableCommand {
   
-  @Argument(help: "base64 encoded gzipped string")
+  @Argument(help: "base64 encoded gzipped telemetry string")
   var input: String
   
   func run() throws {

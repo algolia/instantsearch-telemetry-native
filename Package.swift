@@ -7,7 +7,7 @@ let package = Package(
     name: "InstantSearchTelemetry",
     platforms: [
       .iOS(.v9),
-      .macOS(.v10_10),
+      .macOS(.v10_13),
       .watchOS(.v2),
       .tvOS(.v9)
     ],
