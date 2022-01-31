@@ -9,7 +9,7 @@ make generate
 
 ## Telemetry parser tool
 
-To build telemetry parser tool execute:
+Build telemetry parser tool (Swift 5.5 is required)
 
 ```sh
 make build-parser
@@ -21,7 +21,7 @@ Parse telemetry string
 tmparser decode H4sIAAAAAAAAE3ukzXNAVfCEKt8JVZkLqgyPtNkOqIpcUGUEAJ
 ```
 
-To parse telemetry .csv file with format `ApplicationID, user-agents`, execute: 
+Parse telemetry .csv file with format `ApplicationID, user-agents`:
 
 ```sh
 tmparser scan path-to-log-file.csv
