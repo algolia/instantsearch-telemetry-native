@@ -15,7 +15,7 @@ Build telemetry parser tool (Swift 5.5 is required)
 make build-parser
 ```
 
-Parse telemetry string
+Parse telemetry base64 encoded gzipped string
 
 ```sh
 tmparser decode H4sIAAAAAAAAE3ukzXNAVfCEKt8JVZkLqgyPtNkOqIpcUGUEAJ
