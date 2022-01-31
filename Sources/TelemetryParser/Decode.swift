@@ -15,12 +15,10 @@ struct Decode: ParsableCommand {
   var input: String
   
   func run() throws {
-    let schema = try TelemetrySchema(gzippedBase64String: input)
-    print(schema)
-  }
-  
-  static func decode(_ input: String) throws -> TelemetrySchema {
-    try TelemetrySchema(gzippedBase64String: input)
+    let components = try TelemetrySchema(gzippedBase64String: input).components.map(TelemetryReducer.Component.init)
+    for component in components {
+      print(component.description)
+    }
   }
     
 }

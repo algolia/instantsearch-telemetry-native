@@ -20,11 +20,6 @@ final class TelemetryTests: XCTestCase {
     XCTAssertEqual(schema, decodedSchema)
   }
   
-  func testInitWithString() throws {
-    let string = "H4sIAAAAAAAAE3ukzXNAVfCEKt8JVZkLqgyPtNkOqIpcUGUEAJ/elTUYAAAA"
-    let _ = try TelemetrySchema(gzippedBase64String: string)
-  }
-  
   func testOptOut() throws {
     let telemetry = InstantSearchTelemetry.shared
     
@@ -36,6 +31,11 @@ final class TelemetryTests: XCTestCase {
     telemetry.isEnabled = false
     telemetry.trace(type: .facetList, parameters: .facets)
     XCTAssertTrue(telemetry.components.isEmpty)
+  }
+  
+  func testDecode() throws {
+    let string = "H4sIAAAAAAAAE3ukzXNAVfCEKt8JVZkLqgyPtNkOqIpcUGUEAJ/elTUYAAAA"
+    let _ = try TelemetrySchema(gzippedBase64String: string)
   }
 
 }
