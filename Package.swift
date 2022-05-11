@@ -19,10 +19,10 @@ let package = Package(
     dependencies: [
       .package(name: "SwiftProtobuf",
                url: "https://github.com/apple/swift-protobuf.git",
-               from: "1.6.0"),
+               from: "1.19.0"),
       .package(name: "Gzip",
                url: "https://github.com/1024jp/GzipSwift",
-               from: "5.1.0")
+               from: "5.2.0")
     ],
     targets: [
         .target(
