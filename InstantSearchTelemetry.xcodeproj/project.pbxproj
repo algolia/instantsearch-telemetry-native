@@ -1,0 +1,1472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		"instantsearch-telemetry-native::InstantSearchTelemetryPackageTests::ProductTarget" /* InstantSearchTelemetryPackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_170 /* Build configuration list for PBXAggregateTarget "InstantSearchTelemetryPackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_173 /* PBXTargetDependency */,
+			);
+			name = InstantSearchTelemetryPackageTests;
+			productName = InstantSearchTelemetryPackageTests;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		OBJ_137 /* Data+Gzip.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* Data+Gzip.swift */; };
+		OBJ_139 /* system_zlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "gzipswift::system-zlib::Product" /* system_zlib.framework */; };
+		OBJ_147 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* Package.swift */; };
+		OBJ_153 /* Telemetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Telemetry.swift */; };
+		OBJ_154 /* telemetry.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* telemetry.pb.swift */; };
+		OBJ_156 /* Gzip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "gzipswift::Gzip::Product" /* Gzip.framework */; };
+		OBJ_157 /* system_zlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "gzipswift::system-zlib::Product" /* system_zlib.framework */; };
+		OBJ_158 /* SwiftProtobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "swift-protobuf::SwiftProtobuf::Product" /* SwiftProtobuf.framework */; };
+		OBJ_168 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_179 /* TelemetryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* TelemetryTests.swift */; };
+		OBJ_181 /* InstantSearchTelemetry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "instantsearch-telemetry-native::InstantSearchTelemetry::Product" /* InstantSearchTelemetry.framework */; };
+		OBJ_182 /* Gzip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "gzipswift::Gzip::Product" /* Gzip.framework */; };
+		OBJ_183 /* system_zlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "gzipswift::system-zlib::Product" /* system_zlib.framework */; };
+		OBJ_184 /* SwiftProtobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "swift-protobuf::SwiftProtobuf::Product" /* SwiftProtobuf.framework */; };
+		OBJ_193 /* AnyMessageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* AnyMessageStorage.swift */; };
+		OBJ_194 /* AnyUnpackError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* AnyUnpackError.swift */; };
+		OBJ_195 /* BinaryDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* BinaryDecoder.swift */; };
+		OBJ_196 /* BinaryDecodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* BinaryDecodingError.swift */; };
+		OBJ_197 /* BinaryDecodingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* BinaryDecodingOptions.swift */; };
+		OBJ_198 /* BinaryDelimited.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* BinaryDelimited.swift */; };
+		OBJ_199 /* BinaryEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* BinaryEncoder.swift */; };
+		OBJ_200 /* BinaryEncodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* BinaryEncodingError.swift */; };
+		OBJ_201 /* BinaryEncodingSizeVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* BinaryEncodingSizeVisitor.swift */; };
+		OBJ_202 /* BinaryEncodingVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* BinaryEncodingVisitor.swift */; };
+		OBJ_203 /* CustomJSONCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* CustomJSONCodable.swift */; };
+		OBJ_204 /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* Data+Extensions.swift */; };
+		OBJ_205 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* Decoder.swift */; };
+		OBJ_206 /* DoubleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* DoubleParser.swift */; };
+		OBJ_207 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* Enum.swift */; };
+		OBJ_208 /* ExtensibleMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* ExtensibleMessage.swift */; };
+		OBJ_209 /* ExtensionFieldValueSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* ExtensionFieldValueSet.swift */; };
+		OBJ_210 /* ExtensionFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* ExtensionFields.swift */; };
+		OBJ_211 /* ExtensionMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* ExtensionMap.swift */; };
+		OBJ_212 /* FieldTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* FieldTag.swift */; };
+		OBJ_213 /* FieldTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* FieldTypes.swift */; };
+		OBJ_214 /* Google_Protobuf_Any+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* Google_Protobuf_Any+Extensions.swift */; };
+		OBJ_215 /* Google_Protobuf_Any+Registry.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* Google_Protobuf_Any+Registry.swift */; };
+		OBJ_216 /* Google_Protobuf_Duration+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* Google_Protobuf_Duration+Extensions.swift */; };
+		OBJ_217 /* Google_Protobuf_FieldMask+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* Google_Protobuf_FieldMask+Extensions.swift */; };
+		OBJ_218 /* Google_Protobuf_ListValue+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* Google_Protobuf_ListValue+Extensions.swift */; };
+		OBJ_219 /* Google_Protobuf_NullValue+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* Google_Protobuf_NullValue+Extensions.swift */; };
+		OBJ_220 /* Google_Protobuf_Struct+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* Google_Protobuf_Struct+Extensions.swift */; };
+		OBJ_221 /* Google_Protobuf_Timestamp+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* Google_Protobuf_Timestamp+Extensions.swift */; };
+		OBJ_222 /* Google_Protobuf_Value+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* Google_Protobuf_Value+Extensions.swift */; };
+		OBJ_223 /* Google_Protobuf_Wrappers+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* Google_Protobuf_Wrappers+Extensions.swift */; };
+		OBJ_224 /* HashVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_56 /* HashVisitor.swift */; };
+		OBJ_225 /* Internal.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_57 /* Internal.swift */; };
+		OBJ_226 /* JSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_58 /* JSONDecoder.swift */; };
+		OBJ_227 /* JSONDecodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_59 /* JSONDecodingError.swift */; };
+		OBJ_228 /* JSONDecodingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_60 /* JSONDecodingOptions.swift */; };
+		OBJ_229 /* JSONEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* JSONEncoder.swift */; };
+		OBJ_230 /* JSONEncodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_62 /* JSONEncodingError.swift */; };
+		OBJ_231 /* JSONEncodingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_63 /* JSONEncodingOptions.swift */; };
+		OBJ_232 /* JSONEncodingVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_64 /* JSONEncodingVisitor.swift */; };
+		OBJ_233 /* JSONMapEncodingVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_65 /* JSONMapEncodingVisitor.swift */; };
+		OBJ_234 /* JSONScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* JSONScanner.swift */; };
+		OBJ_235 /* MathUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* MathUtils.swift */; };
+		OBJ_236 /* Message+AnyAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_68 /* Message+AnyAdditions.swift */; };
+		OBJ_237 /* Message+BinaryAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_69 /* Message+BinaryAdditions.swift */; };
+		OBJ_238 /* Message+JSONAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_70 /* Message+JSONAdditions.swift */; };
+		OBJ_239 /* Message+JSONArrayAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_71 /* Message+JSONArrayAdditions.swift */; };
+		OBJ_240 /* Message+TextFormatAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_72 /* Message+TextFormatAdditions.swift */; };
+		OBJ_241 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_73 /* Message.swift */; };
+		OBJ_242 /* MessageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_74 /* MessageExtension.swift */; };
+		OBJ_243 /* NameMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_75 /* NameMap.swift */; };
+		OBJ_244 /* ProtoNameProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_76 /* ProtoNameProviding.swift */; };
+		OBJ_245 /* ProtobufAPIVersionCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_77 /* ProtobufAPIVersionCheck.swift */; };
+		OBJ_246 /* ProtobufMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_78 /* ProtobufMap.swift */; };
+		OBJ_247 /* SelectiveVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_79 /* SelectiveVisitor.swift */; };
+		OBJ_248 /* SimpleExtensionMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_80 /* SimpleExtensionMap.swift */; };
+		OBJ_249 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_81 /* StringUtils.swift */; };
+		OBJ_250 /* TextFormatDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_82 /* TextFormatDecoder.swift */; };
+		OBJ_251 /* TextFormatDecodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_83 /* TextFormatDecodingError.swift */; };
+		OBJ_252 /* TextFormatDecodingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_84 /* TextFormatDecodingOptions.swift */; };
+		OBJ_253 /* TextFormatEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_85 /* TextFormatEncoder.swift */; };
+		OBJ_254 /* TextFormatEncodingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_86 /* TextFormatEncodingOptions.swift */; };
+		OBJ_255 /* TextFormatEncodingVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_87 /* TextFormatEncodingVisitor.swift */; };
+		OBJ_256 /* TextFormatScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_88 /* TextFormatScanner.swift */; };
+		OBJ_257 /* TimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_89 /* TimeUtils.swift */; };
+		OBJ_258 /* UnknownStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_90 /* UnknownStorage.swift */; };
+		OBJ_259 /* UnsafeBufferPointer+Shims.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_91 /* UnsafeBufferPointer+Shims.swift */; };
+		OBJ_260 /* UnsafeRawPointer+Shims.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_92 /* UnsafeRawPointer+Shims.swift */; };
+		OBJ_261 /* Varint.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_93 /* Varint.swift */; };
+		OBJ_262 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_94 /* Version.swift */; };
+		OBJ_263 /* Visitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_95 /* Visitor.swift */; };
+		OBJ_264 /* WireFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_96 /* WireFormat.swift */; };
+		OBJ_265 /* ZigZag.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_97 /* ZigZag.swift */; };
+		OBJ_266 /* any.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_98 /* any.pb.swift */; };
+		OBJ_267 /* api.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_99 /* api.pb.swift */; };
+		OBJ_268 /* descriptor.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_100 /* descriptor.pb.swift */; };
+		OBJ_269 /* duration.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_101 /* duration.pb.swift */; };
+		OBJ_270 /* empty.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_102 /* empty.pb.swift */; };
+		OBJ_271 /* field_mask.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_103 /* field_mask.pb.swift */; };
+		OBJ_272 /* source_context.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_104 /* source_context.pb.swift */; };
+		OBJ_273 /* struct.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_105 /* struct.pb.swift */; };
+		OBJ_274 /* timestamp.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_106 /* timestamp.pb.swift */; };
+		OBJ_275 /* type.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_107 /* type.pb.swift */; };
+		OBJ_276 /* wrappers.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_108 /* wrappers.pb.swift */; };
+		OBJ_283 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_111 /* Package.swift */; };
+		OBJ_288 /* anchor.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* anchor.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		40328691282C0F6E00F340EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "gzipswift::Gzip";
+			remoteInfo = Gzip;
+		};
+		40328692282C0F6E00F340EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "gzipswift::system-zlib";
+			remoteInfo = "system-zlib";
+		};
+		40328693282C0F6E00F340EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "gzipswift::system-zlib";
+			remoteInfo = "system-zlib";
+		};
+		40328694282C0F6E00F340EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "swift-protobuf::SwiftProtobuf";
+			remoteInfo = SwiftProtobuf;
+		};
+		40328695282C0F6E00F340EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "instantsearch-telemetry-native::InstantSearchTelemetry";
+			remoteInfo = InstantSearchTelemetry;
+		};
+		40328696282C0F6E00F340EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "gzipswift::Gzip";
+			remoteInfo = Gzip;
+		};
+		40328697282C0F6E00F340EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "gzipswift::system-zlib";
+			remoteInfo = "system-zlib";
+		};
+		40328698282C0F6E00F340EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "swift-protobuf::SwiftProtobuf";
+			remoteInfo = SwiftProtobuf;
+		};
+		40328699282C0F7400F340EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "instantsearch-telemetry-native::InstantSearchTelemetryTests";
+			remoteInfo = InstantSearchTelemetryTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		OBJ_10 /* telemetry.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = telemetry.pb.swift; sourceTree = "<group>"; };
+		OBJ_100 /* descriptor.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = descriptor.pb.swift; sourceTree = "<group>"; };
+		OBJ_101 /* duration.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = duration.pb.swift; sourceTree = "<group>"; };
+		OBJ_102 /* empty.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = empty.pb.swift; sourceTree = "<group>"; };
+		OBJ_103 /* field_mask.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = field_mask.pb.swift; sourceTree = "<group>"; };
+		OBJ_104 /* source_context.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = source_context.pb.swift; sourceTree = "<group>"; };
+		OBJ_105 /* struct.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = struct.pb.swift; sourceTree = "<group>"; };
+		OBJ_106 /* timestamp.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timestamp.pb.swift; sourceTree = "<group>"; };
+		OBJ_107 /* type.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = type.pb.swift; sourceTree = "<group>"; };
+		OBJ_108 /* wrappers.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wrappers.pb.swift; sourceTree = "<group>"; };
+		OBJ_111 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/vladislav.fitc/Workspace/algolia/instantsearch-telemetry-native/.build/checkouts/swift-protobuf/Package.swift"; sourceTree = "<group>"; };
+		OBJ_118 /* gradle */ = {isa = PBXFileReference; lastKnownFileType = folder; path = gradle; sourceTree = SOURCE_ROOT; };
+		OBJ_119 /* generator */ = {isa = PBXFileReference; lastKnownFileType = folder; path = generator; sourceTree = SOURCE_ROOT; };
+		OBJ_120 /* telemetry */ = {isa = PBXFileReference; lastKnownFileType = folder; path = telemetry; sourceTree = SOURCE_ROOT; };
+		OBJ_121 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		OBJ_122 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		OBJ_123 /* CODEOWNERS */ = {isa = PBXFileReference; lastKnownFileType = text; path = CODEOWNERS; sourceTree = "<group>"; };
+		OBJ_124 /* InstantSearchTelemetry.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = InstantSearchTelemetry.podspec; sourceTree = "<group>"; };
+		OBJ_125 /* telemetry.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = telemetry.proto; sourceTree = "<group>"; };
+		OBJ_126 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		OBJ_127 /* gradlew */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = gradlew; sourceTree = "<group>"; };
+		OBJ_128 /* build.gradle.kts */ = {isa = PBXFileReference; lastKnownFileType = text; path = build.gradle.kts; sourceTree = "<group>"; };
+		OBJ_129 /* settings.gradle.kts */ = {isa = PBXFileReference; lastKnownFileType = text; path = settings.gradle.kts; sourceTree = "<group>"; };
+		OBJ_13 /* TelemetryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelemetryTests.swift; sourceTree = "<group>"; };
+		OBJ_130 /* gradle.properties */ = {isa = PBXFileReference; lastKnownFileType = text; path = gradle.properties; sourceTree = "<group>"; };
+		OBJ_131 /* gradlew.bat */ = {isa = PBXFileReference; lastKnownFileType = text; path = gradlew.bat; sourceTree = "<group>"; };
+		OBJ_17 /* Data+Gzip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Gzip.swift"; sourceTree = "<group>"; };
+		OBJ_19 /* anchor.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = anchor.c; sourceTree = "<group>"; };
+		OBJ_21 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = "/Users/vladislav.fitc/Workspace/algolia/instantsearch-telemetry-native/.build/checkouts/GzipSwift/Sources/system-zlib/include/module.modulemap"; sourceTree = "<group>"; };
+		OBJ_22 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/vladislav.fitc/Workspace/algolia/instantsearch-telemetry-native/.build/checkouts/GzipSwift/Package.swift"; sourceTree = "<group>"; };
+		OBJ_25 /* AnyMessageStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyMessageStorage.swift; sourceTree = "<group>"; };
+		OBJ_26 /* AnyUnpackError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyUnpackError.swift; sourceTree = "<group>"; };
+		OBJ_27 /* BinaryDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryDecoder.swift; sourceTree = "<group>"; };
+		OBJ_28 /* BinaryDecodingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryDecodingError.swift; sourceTree = "<group>"; };
+		OBJ_29 /* BinaryDecodingOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryDecodingOptions.swift; sourceTree = "<group>"; };
+		OBJ_30 /* BinaryDelimited.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryDelimited.swift; sourceTree = "<group>"; };
+		OBJ_31 /* BinaryEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryEncoder.swift; sourceTree = "<group>"; };
+		OBJ_32 /* BinaryEncodingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryEncodingError.swift; sourceTree = "<group>"; };
+		OBJ_33 /* BinaryEncodingSizeVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryEncodingSizeVisitor.swift; sourceTree = "<group>"; };
+		OBJ_34 /* BinaryEncodingVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryEncodingVisitor.swift; sourceTree = "<group>"; };
+		OBJ_35 /* CustomJSONCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomJSONCodable.swift; sourceTree = "<group>"; };
+		OBJ_36 /* Data+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
+		OBJ_37 /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
+		OBJ_38 /* DoubleParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleParser.swift; sourceTree = "<group>"; };
+		OBJ_39 /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
+		OBJ_40 /* ExtensibleMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensibleMessage.swift; sourceTree = "<group>"; };
+		OBJ_41 /* ExtensionFieldValueSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionFieldValueSet.swift; sourceTree = "<group>"; };
+		OBJ_42 /* ExtensionFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionFields.swift; sourceTree = "<group>"; };
+		OBJ_43 /* ExtensionMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionMap.swift; sourceTree = "<group>"; };
+		OBJ_44 /* FieldTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldTag.swift; sourceTree = "<group>"; };
+		OBJ_45 /* FieldTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldTypes.swift; sourceTree = "<group>"; };
+		OBJ_46 /* Google_Protobuf_Any+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Google_Protobuf_Any+Extensions.swift"; sourceTree = "<group>"; };
+		OBJ_47 /* Google_Protobuf_Any+Registry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Google_Protobuf_Any+Registry.swift"; sourceTree = "<group>"; };
+		OBJ_48 /* Google_Protobuf_Duration+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Google_Protobuf_Duration+Extensions.swift"; sourceTree = "<group>"; };
+		OBJ_49 /* Google_Protobuf_FieldMask+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Google_Protobuf_FieldMask+Extensions.swift"; sourceTree = "<group>"; };
+		OBJ_50 /* Google_Protobuf_ListValue+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Google_Protobuf_ListValue+Extensions.swift"; sourceTree = "<group>"; };
+		OBJ_51 /* Google_Protobuf_NullValue+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Google_Protobuf_NullValue+Extensions.swift"; sourceTree = "<group>"; };
+		OBJ_52 /* Google_Protobuf_Struct+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Google_Protobuf_Struct+Extensions.swift"; sourceTree = "<group>"; };
+		OBJ_53 /* Google_Protobuf_Timestamp+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Google_Protobuf_Timestamp+Extensions.swift"; sourceTree = "<group>"; };
+		OBJ_54 /* Google_Protobuf_Value+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Google_Protobuf_Value+Extensions.swift"; sourceTree = "<group>"; };
+		OBJ_55 /* Google_Protobuf_Wrappers+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Google_Protobuf_Wrappers+Extensions.swift"; sourceTree = "<group>"; };
+		OBJ_56 /* HashVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashVisitor.swift; sourceTree = "<group>"; };
+		OBJ_57 /* Internal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Internal.swift; sourceTree = "<group>"; };
+		OBJ_58 /* JSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoder.swift; sourceTree = "<group>"; };
+		OBJ_59 /* JSONDecodingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecodingError.swift; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_60 /* JSONDecodingOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecodingOptions.swift; sourceTree = "<group>"; };
+		OBJ_61 /* JSONEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONEncoder.swift; sourceTree = "<group>"; };
+		OBJ_62 /* JSONEncodingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONEncodingError.swift; sourceTree = "<group>"; };
+		OBJ_63 /* JSONEncodingOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONEncodingOptions.swift; sourceTree = "<group>"; };
+		OBJ_64 /* JSONEncodingVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONEncodingVisitor.swift; sourceTree = "<group>"; };
+		OBJ_65 /* JSONMapEncodingVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONMapEncodingVisitor.swift; sourceTree = "<group>"; };
+		OBJ_66 /* JSONScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONScanner.swift; sourceTree = "<group>"; };
+		OBJ_67 /* MathUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathUtils.swift; sourceTree = "<group>"; };
+		OBJ_68 /* Message+AnyAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Message+AnyAdditions.swift"; sourceTree = "<group>"; };
+		OBJ_69 /* Message+BinaryAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Message+BinaryAdditions.swift"; sourceTree = "<group>"; };
+		OBJ_70 /* Message+JSONAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Message+JSONAdditions.swift"; sourceTree = "<group>"; };
+		OBJ_71 /* Message+JSONArrayAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Message+JSONArrayAdditions.swift"; sourceTree = "<group>"; };
+		OBJ_72 /* Message+TextFormatAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Message+TextFormatAdditions.swift"; sourceTree = "<group>"; };
+		OBJ_73 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		OBJ_74 /* MessageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageExtension.swift; sourceTree = "<group>"; };
+		OBJ_75 /* NameMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameMap.swift; sourceTree = "<group>"; };
+		OBJ_76 /* ProtoNameProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtoNameProviding.swift; sourceTree = "<group>"; };
+		OBJ_77 /* ProtobufAPIVersionCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufAPIVersionCheck.swift; sourceTree = "<group>"; };
+		OBJ_78 /* ProtobufMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtobufMap.swift; sourceTree = "<group>"; };
+		OBJ_79 /* SelectiveVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectiveVisitor.swift; sourceTree = "<group>"; };
+		OBJ_80 /* SimpleExtensionMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleExtensionMap.swift; sourceTree = "<group>"; };
+		OBJ_81 /* StringUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
+		OBJ_82 /* TextFormatDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFormatDecoder.swift; sourceTree = "<group>"; };
+		OBJ_83 /* TextFormatDecodingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFormatDecodingError.swift; sourceTree = "<group>"; };
+		OBJ_84 /* TextFormatDecodingOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFormatDecodingOptions.swift; sourceTree = "<group>"; };
+		OBJ_85 /* TextFormatEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFormatEncoder.swift; sourceTree = "<group>"; };
+		OBJ_86 /* TextFormatEncodingOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFormatEncodingOptions.swift; sourceTree = "<group>"; };
+		OBJ_87 /* TextFormatEncodingVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFormatEncodingVisitor.swift; sourceTree = "<group>"; };
+		OBJ_88 /* TextFormatScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFormatScanner.swift; sourceTree = "<group>"; };
+		OBJ_89 /* TimeUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeUtils.swift; sourceTree = "<group>"; };
+		OBJ_9 /* Telemetry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Telemetry.swift; sourceTree = "<group>"; };
+		OBJ_90 /* UnknownStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnknownStorage.swift; sourceTree = "<group>"; };
+		OBJ_91 /* UnsafeBufferPointer+Shims.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UnsafeBufferPointer+Shims.swift"; sourceTree = "<group>"; };
+		OBJ_92 /* UnsafeRawPointer+Shims.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UnsafeRawPointer+Shims.swift"; sourceTree = "<group>"; };
+		OBJ_93 /* Varint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Varint.swift; sourceTree = "<group>"; };
+		OBJ_94 /* Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
+		OBJ_95 /* Visitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visitor.swift; sourceTree = "<group>"; };
+		OBJ_96 /* WireFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WireFormat.swift; sourceTree = "<group>"; };
+		OBJ_97 /* ZigZag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZigZag.swift; sourceTree = "<group>"; };
+		OBJ_98 /* any.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = any.pb.swift; sourceTree = "<group>"; };
+		OBJ_99 /* api.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api.pb.swift; sourceTree = "<group>"; };
+		"gzipswift::Gzip::Product" /* Gzip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Gzip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"gzipswift::system-zlib::Product" /* system_zlib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = system_zlib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"instantsearch-telemetry-native::InstantSearchTelemetry::Product" /* InstantSearchTelemetry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = InstantSearchTelemetry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"instantsearch-telemetry-native::InstantSearchTelemetryTests::Product" /* InstantSearchTelemetryTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = InstantSearchTelemetryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"swift-protobuf::SwiftProtobuf::Product" /* SwiftProtobuf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftProtobuf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		OBJ_138 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_139 /* system_zlib.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_155 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_156 /* Gzip.framework in Frameworks */,
+				OBJ_157 /* system_zlib.framework in Frameworks */,
+				OBJ_158 /* SwiftProtobuf.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_180 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_181 /* InstantSearchTelemetry.framework in Frameworks */,
+				OBJ_182 /* Gzip.framework in Frameworks */,
+				OBJ_183 /* system_zlib.framework in Frameworks */,
+				OBJ_184 /* SwiftProtobuf.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_277 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_289 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		OBJ_109 /* SwiftProtobufPluginLibrary */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SwiftProtobufPluginLibrary;
+			path = ".build/checkouts/swift-protobuf/Sources/SwiftProtobufPluginLibrary";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_11 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_12 /* InstantSearchTelemetryTests */,
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_110 /* protoc-gen-swift */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "protoc-gen-swift";
+			path = ".build/checkouts/swift-protobuf/Sources/protoc-gen-swift";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_112 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"gzipswift::Gzip::Product" /* Gzip.framework */,
+				"instantsearch-telemetry-native::InstantSearchTelemetry::Product" /* InstantSearchTelemetry.framework */,
+				"instantsearch-telemetry-native::InstantSearchTelemetryTests::Product" /* InstantSearchTelemetryTests.xctest */,
+				"swift-protobuf::SwiftProtobuf::Product" /* SwiftProtobuf.framework */,
+				"gzipswift::system-zlib::Product" /* system_zlib.framework */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_12 /* InstantSearchTelemetryTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_13 /* TelemetryTests.swift */,
+			);
+			name = InstantSearchTelemetryTests;
+			path = Tests/InstantSearchTelemetryTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_14 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_15 /* Gzip 5.2.0 */,
+				OBJ_23 /* SwiftProtobuf 1.19.0 */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		OBJ_15 /* Gzip 5.2.0 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_16 /* Gzip */,
+				OBJ_18 /* system-zlib */,
+				OBJ_22 /* Package.swift */,
+			);
+			name = "Gzip 5.2.0";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_16 /* Gzip */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_17 /* Data+Gzip.swift */,
+			);
+			name = Gzip;
+			path = .build/checkouts/GzipSwift/Sources/Gzip;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_18 /* system-zlib */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_19 /* anchor.c */,
+				OBJ_20 /* include */,
+			);
+			name = "system-zlib";
+			path = ".build/checkouts/GzipSwift/Sources/system-zlib";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_20 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_21 /* module.modulemap */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		OBJ_23 /* SwiftProtobuf 1.19.0 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_24 /* SwiftProtobuf */,
+				OBJ_109 /* SwiftProtobufPluginLibrary */,
+				OBJ_110 /* protoc-gen-swift */,
+				OBJ_111 /* Package.swift */,
+			);
+			name = "SwiftProtobuf 1.19.0";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_24 /* SwiftProtobuf */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_25 /* AnyMessageStorage.swift */,
+				OBJ_26 /* AnyUnpackError.swift */,
+				OBJ_27 /* BinaryDecoder.swift */,
+				OBJ_28 /* BinaryDecodingError.swift */,
+				OBJ_29 /* BinaryDecodingOptions.swift */,
+				OBJ_30 /* BinaryDelimited.swift */,
+				OBJ_31 /* BinaryEncoder.swift */,
+				OBJ_32 /* BinaryEncodingError.swift */,
+				OBJ_33 /* BinaryEncodingSizeVisitor.swift */,
+				OBJ_34 /* BinaryEncodingVisitor.swift */,
+				OBJ_35 /* CustomJSONCodable.swift */,
+				OBJ_36 /* Data+Extensions.swift */,
+				OBJ_37 /* Decoder.swift */,
+				OBJ_38 /* DoubleParser.swift */,
+				OBJ_39 /* Enum.swift */,
+				OBJ_40 /* ExtensibleMessage.swift */,
+				OBJ_41 /* ExtensionFieldValueSet.swift */,
+				OBJ_42 /* ExtensionFields.swift */,
+				OBJ_43 /* ExtensionMap.swift */,
+				OBJ_44 /* FieldTag.swift */,
+				OBJ_45 /* FieldTypes.swift */,
+				OBJ_46 /* Google_Protobuf_Any+Extensions.swift */,
+				OBJ_47 /* Google_Protobuf_Any+Registry.swift */,
+				OBJ_48 /* Google_Protobuf_Duration+Extensions.swift */,
+				OBJ_49 /* Google_Protobuf_FieldMask+Extensions.swift */,
+				OBJ_50 /* Google_Protobuf_ListValue+Extensions.swift */,
+				OBJ_51 /* Google_Protobuf_NullValue+Extensions.swift */,
+				OBJ_52 /* Google_Protobuf_Struct+Extensions.swift */,
+				OBJ_53 /* Google_Protobuf_Timestamp+Extensions.swift */,
+				OBJ_54 /* Google_Protobuf_Value+Extensions.swift */,
+				OBJ_55 /* Google_Protobuf_Wrappers+Extensions.swift */,
+				OBJ_56 /* HashVisitor.swift */,
+				OBJ_57 /* Internal.swift */,
+				OBJ_58 /* JSONDecoder.swift */,
+				OBJ_59 /* JSONDecodingError.swift */,
+				OBJ_60 /* JSONDecodingOptions.swift */,
+				OBJ_61 /* JSONEncoder.swift */,
+				OBJ_62 /* JSONEncodingError.swift */,
+				OBJ_63 /* JSONEncodingOptions.swift */,
+				OBJ_64 /* JSONEncodingVisitor.swift */,
+				OBJ_65 /* JSONMapEncodingVisitor.swift */,
+				OBJ_66 /* JSONScanner.swift */,
+				OBJ_67 /* MathUtils.swift */,
+				OBJ_68 /* Message+AnyAdditions.swift */,
+				OBJ_69 /* Message+BinaryAdditions.swift */,
+				OBJ_70 /* Message+JSONAdditions.swift */,
+				OBJ_71 /* Message+JSONArrayAdditions.swift */,
+				OBJ_72 /* Message+TextFormatAdditions.swift */,
+				OBJ_73 /* Message.swift */,
+				OBJ_74 /* MessageExtension.swift */,
+				OBJ_75 /* NameMap.swift */,
+				OBJ_76 /* ProtoNameProviding.swift */,
+				OBJ_77 /* ProtobufAPIVersionCheck.swift */,
+				OBJ_78 /* ProtobufMap.swift */,
+				OBJ_79 /* SelectiveVisitor.swift */,
+				OBJ_80 /* SimpleExtensionMap.swift */,
+				OBJ_81 /* StringUtils.swift */,
+				OBJ_82 /* TextFormatDecoder.swift */,
+				OBJ_83 /* TextFormatDecodingError.swift */,
+				OBJ_84 /* TextFormatDecodingOptions.swift */,
+				OBJ_85 /* TextFormatEncoder.swift */,
+				OBJ_86 /* TextFormatEncodingOptions.swift */,
+				OBJ_87 /* TextFormatEncodingVisitor.swift */,
+				OBJ_88 /* TextFormatScanner.swift */,
+				OBJ_89 /* TimeUtils.swift */,
+				OBJ_90 /* UnknownStorage.swift */,
+				OBJ_91 /* UnsafeBufferPointer+Shims.swift */,
+				OBJ_92 /* UnsafeRawPointer+Shims.swift */,
+				OBJ_93 /* Varint.swift */,
+				OBJ_94 /* Version.swift */,
+				OBJ_95 /* Visitor.swift */,
+				OBJ_96 /* WireFormat.swift */,
+				OBJ_97 /* ZigZag.swift */,
+				OBJ_98 /* any.pb.swift */,
+				OBJ_99 /* api.pb.swift */,
+				OBJ_100 /* descriptor.pb.swift */,
+				OBJ_101 /* duration.pb.swift */,
+				OBJ_102 /* empty.pb.swift */,
+				OBJ_103 /* field_mask.pb.swift */,
+				OBJ_104 /* source_context.pb.swift */,
+				OBJ_105 /* struct.pb.swift */,
+				OBJ_106 /* timestamp.pb.swift */,
+				OBJ_107 /* type.pb.swift */,
+				OBJ_108 /* wrappers.pb.swift */,
+			);
+			name = SwiftProtobuf;
+			path = ".build/checkouts/swift-protobuf/Sources/SwiftProtobuf";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_5 /*  */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_11 /* Tests */,
+				OBJ_14 /* Dependencies */,
+				OBJ_112 /* Products */,
+				OBJ_118 /* gradle */,
+				OBJ_119 /* generator */,
+				OBJ_120 /* telemetry */,
+				OBJ_121 /* Makefile */,
+				OBJ_122 /* Cartfile */,
+				OBJ_123 /* CODEOWNERS */,
+				OBJ_124 /* InstantSearchTelemetry.podspec */,
+				OBJ_125 /* telemetry.proto */,
+				OBJ_126 /* README.md */,
+				OBJ_127 /* gradlew */,
+				OBJ_128 /* build.gradle.kts */,
+				OBJ_129 /* settings.gradle.kts */,
+				OBJ_130 /* gradle.properties */,
+				OBJ_131 /* gradlew.bat */,
+			);
+			name = "";
+			sourceTree = "<group>";
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* InstantSearchTelemetry */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_8 /* InstantSearchTelemetry */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* Telemetry.swift */,
+				OBJ_10 /* telemetry.pb.swift */,
+			);
+			name = InstantSearchTelemetry;
+			path = Sources/InstantSearchTelemetry;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		"gzipswift::Gzip" /* Gzip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_133 /* Build configuration list for PBXNativeTarget "Gzip" */;
+			buildPhases = (
+				OBJ_136 /* Sources */,
+				OBJ_138 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_140 /* PBXTargetDependency */,
+			);
+			name = Gzip;
+			productName = Gzip;
+			productReference = "gzipswift::Gzip::Product" /* Gzip.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"gzipswift::SwiftPMPackageDescription" /* GzipPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_143 /* Build configuration list for PBXNativeTarget "GzipPackageDescription" */;
+			buildPhases = (
+				OBJ_146 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GzipPackageDescription;
+			productName = GzipPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"gzipswift::system-zlib" /* system-zlib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_284 /* Build configuration list for PBXNativeTarget "system-zlib" */;
+			buildPhases = (
+				OBJ_287 /* Sources */,
+				OBJ_289 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "system-zlib";
+			productName = system_zlib;
+			productReference = "gzipswift::system-zlib::Product" /* system_zlib.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"instantsearch-telemetry-native::InstantSearchTelemetry" /* InstantSearchTelemetry */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_149 /* Build configuration list for PBXNativeTarget "InstantSearchTelemetry" */;
+			buildPhases = (
+				OBJ_152 /* Sources */,
+				OBJ_155 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_159 /* PBXTargetDependency */,
+				OBJ_160 /* PBXTargetDependency */,
+				OBJ_161 /* PBXTargetDependency */,
+			);
+			name = InstantSearchTelemetry;
+			productName = InstantSearchTelemetry;
+			productReference = "instantsearch-telemetry-native::InstantSearchTelemetry::Product" /* InstantSearchTelemetry.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"instantsearch-telemetry-native::InstantSearchTelemetryTests" /* InstantSearchTelemetryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_175 /* Build configuration list for PBXNativeTarget "InstantSearchTelemetryTests" */;
+			buildPhases = (
+				OBJ_178 /* Sources */,
+				OBJ_180 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_185 /* PBXTargetDependency */,
+				OBJ_186 /* PBXTargetDependency */,
+				OBJ_187 /* PBXTargetDependency */,
+				OBJ_188 /* PBXTargetDependency */,
+			);
+			name = InstantSearchTelemetryTests;
+			productName = InstantSearchTelemetryTests;
+			productReference = "instantsearch-telemetry-native::InstantSearchTelemetryTests::Product" /* InstantSearchTelemetryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		"instantsearch-telemetry-native::SwiftPMPackageDescription" /* InstantSearchTelemetryPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_164 /* Build configuration list for PBXNativeTarget "InstantSearchTelemetryPackageDescription" */;
+			buildPhases = (
+				OBJ_167 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InstantSearchTelemetryPackageDescription;
+			productName = InstantSearchTelemetryPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"swift-protobuf::SwiftPMPackageDescription" /* SwiftProtobufPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_279 /* Build configuration list for PBXNativeTarget "SwiftProtobufPackageDescription" */;
+			buildPhases = (
+				OBJ_282 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftProtobufPackageDescription;
+			productName = SwiftProtobufPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"swift-protobuf::SwiftProtobuf" /* SwiftProtobuf */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_189 /* Build configuration list for PBXNativeTarget "SwiftProtobuf" */;
+			buildPhases = (
+				OBJ_192 /* Sources */,
+				OBJ_277 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftProtobuf;
+			productName = SwiftProtobuf;
+			productReference = "swift-protobuf::SwiftProtobuf::Product" /* SwiftProtobuf.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		OBJ_1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftMigration = 9999;
+				LastUpgradeCheck = 9999;
+			};
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "InstantSearchTelemetry" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_112 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"gzipswift::Gzip" /* Gzip */,
+				"gzipswift::SwiftPMPackageDescription" /* GzipPackageDescription */,
+				"instantsearch-telemetry-native::InstantSearchTelemetry" /* InstantSearchTelemetry */,
+				"instantsearch-telemetry-native::SwiftPMPackageDescription" /* InstantSearchTelemetryPackageDescription */,
+				"instantsearch-telemetry-native::InstantSearchTelemetryPackageTests::ProductTarget" /* InstantSearchTelemetryPackageTests */,
+				"instantsearch-telemetry-native::InstantSearchTelemetryTests" /* InstantSearchTelemetryTests */,
+				"swift-protobuf::SwiftProtobuf" /* SwiftProtobuf */,
+				"swift-protobuf::SwiftPMPackageDescription" /* SwiftProtobufPackageDescription */,
+				"gzipswift::system-zlib" /* system-zlib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		OBJ_136 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_137 /* Data+Gzip.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_146 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_147 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_152 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_153 /* Telemetry.swift in Sources */,
+				OBJ_154 /* telemetry.pb.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_167 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_168 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_178 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_179 /* TelemetryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_192 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_193 /* AnyMessageStorage.swift in Sources */,
+				OBJ_194 /* AnyUnpackError.swift in Sources */,
+				OBJ_195 /* BinaryDecoder.swift in Sources */,
+				OBJ_196 /* BinaryDecodingError.swift in Sources */,
+				OBJ_197 /* BinaryDecodingOptions.swift in Sources */,
+				OBJ_198 /* BinaryDelimited.swift in Sources */,
+				OBJ_199 /* BinaryEncoder.swift in Sources */,
+				OBJ_200 /* BinaryEncodingError.swift in Sources */,
+				OBJ_201 /* BinaryEncodingSizeVisitor.swift in Sources */,
+				OBJ_202 /* BinaryEncodingVisitor.swift in Sources */,
+				OBJ_203 /* CustomJSONCodable.swift in Sources */,
+				OBJ_204 /* Data+Extensions.swift in Sources */,
+				OBJ_205 /* Decoder.swift in Sources */,
+				OBJ_206 /* DoubleParser.swift in Sources */,
+				OBJ_207 /* Enum.swift in Sources */,
+				OBJ_208 /* ExtensibleMessage.swift in Sources */,
+				OBJ_209 /* ExtensionFieldValueSet.swift in Sources */,
+				OBJ_210 /* ExtensionFields.swift in Sources */,
+				OBJ_211 /* ExtensionMap.swift in Sources */,
+				OBJ_212 /* FieldTag.swift in Sources */,
+				OBJ_213 /* FieldTypes.swift in Sources */,
+				OBJ_214 /* Google_Protobuf_Any+Extensions.swift in Sources */,
+				OBJ_215 /* Google_Protobuf_Any+Registry.swift in Sources */,
+				OBJ_216 /* Google_Protobuf_Duration+Extensions.swift in Sources */,
+				OBJ_217 /* Google_Protobuf_FieldMask+Extensions.swift in Sources */,
+				OBJ_218 /* Google_Protobuf_ListValue+Extensions.swift in Sources */,
+				OBJ_219 /* Google_Protobuf_NullValue+Extensions.swift in Sources */,
+				OBJ_220 /* Google_Protobuf_Struct+Extensions.swift in Sources */,
+				OBJ_221 /* Google_Protobuf_Timestamp+Extensions.swift in Sources */,
+				OBJ_222 /* Google_Protobuf_Value+Extensions.swift in Sources */,
+				OBJ_223 /* Google_Protobuf_Wrappers+Extensions.swift in Sources */,
+				OBJ_224 /* HashVisitor.swift in Sources */,
+				OBJ_225 /* Internal.swift in Sources */,
+				OBJ_226 /* JSONDecoder.swift in Sources */,
+				OBJ_227 /* JSONDecodingError.swift in Sources */,
+				OBJ_228 /* JSONDecodingOptions.swift in Sources */,
+				OBJ_229 /* JSONEncoder.swift in Sources */,
+				OBJ_230 /* JSONEncodingError.swift in Sources */,
+				OBJ_231 /* JSONEncodingOptions.swift in Sources */,
+				OBJ_232 /* JSONEncodingVisitor.swift in Sources */,
+				OBJ_233 /* JSONMapEncodingVisitor.swift in Sources */,
+				OBJ_234 /* JSONScanner.swift in Sources */,
+				OBJ_235 /* MathUtils.swift in Sources */,
+				OBJ_236 /* Message+AnyAdditions.swift in Sources */,
+				OBJ_237 /* Message+BinaryAdditions.swift in Sources */,
+				OBJ_238 /* Message+JSONAdditions.swift in Sources */,
+				OBJ_239 /* Message+JSONArrayAdditions.swift in Sources */,
+				OBJ_240 /* Message+TextFormatAdditions.swift in Sources */,
+				OBJ_241 /* Message.swift in Sources */,
+				OBJ_242 /* MessageExtension.swift in Sources */,
+				OBJ_243 /* NameMap.swift in Sources */,
+				OBJ_244 /* ProtoNameProviding.swift in Sources */,
+				OBJ_245 /* ProtobufAPIVersionCheck.swift in Sources */,
+				OBJ_246 /* ProtobufMap.swift in Sources */,
+				OBJ_247 /* SelectiveVisitor.swift in Sources */,
+				OBJ_248 /* SimpleExtensionMap.swift in Sources */,
+				OBJ_249 /* StringUtils.swift in Sources */,
+				OBJ_250 /* TextFormatDecoder.swift in Sources */,
+				OBJ_251 /* TextFormatDecodingError.swift in Sources */,
+				OBJ_252 /* TextFormatDecodingOptions.swift in Sources */,
+				OBJ_253 /* TextFormatEncoder.swift in Sources */,
+				OBJ_254 /* TextFormatEncodingOptions.swift in Sources */,
+				OBJ_255 /* TextFormatEncodingVisitor.swift in Sources */,
+				OBJ_256 /* TextFormatScanner.swift in Sources */,
+				OBJ_257 /* TimeUtils.swift in Sources */,
+				OBJ_258 /* UnknownStorage.swift in Sources */,
+				OBJ_259 /* UnsafeBufferPointer+Shims.swift in Sources */,
+				OBJ_260 /* UnsafeRawPointer+Shims.swift in Sources */,
+				OBJ_261 /* Varint.swift in Sources */,
+				OBJ_262 /* Version.swift in Sources */,
+				OBJ_263 /* Visitor.swift in Sources */,
+				OBJ_264 /* WireFormat.swift in Sources */,
+				OBJ_265 /* ZigZag.swift in Sources */,
+				OBJ_266 /* any.pb.swift in Sources */,
+				OBJ_267 /* api.pb.swift in Sources */,
+				OBJ_268 /* descriptor.pb.swift in Sources */,
+				OBJ_269 /* duration.pb.swift in Sources */,
+				OBJ_270 /* empty.pb.swift in Sources */,
+				OBJ_271 /* field_mask.pb.swift in Sources */,
+				OBJ_272 /* source_context.pb.swift in Sources */,
+				OBJ_273 /* struct.pb.swift in Sources */,
+				OBJ_274 /* timestamp.pb.swift in Sources */,
+				OBJ_275 /* type.pb.swift in Sources */,
+				OBJ_276 /* wrappers.pb.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_282 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_283 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_287 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_288 /* anchor.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		OBJ_140 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "gzipswift::system-zlib" /* system-zlib */;
+			targetProxy = 40328692282C0F6E00F340EF /* PBXContainerItemProxy */;
+		};
+		OBJ_159 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "gzipswift::Gzip" /* Gzip */;
+			targetProxy = 40328691282C0F6E00F340EF /* PBXContainerItemProxy */;
+		};
+		OBJ_160 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "gzipswift::system-zlib" /* system-zlib */;
+			targetProxy = 40328693282C0F6E00F340EF /* PBXContainerItemProxy */;
+		};
+		OBJ_161 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "swift-protobuf::SwiftProtobuf" /* SwiftProtobuf */;
+			targetProxy = 40328694282C0F6E00F340EF /* PBXContainerItemProxy */;
+		};
+		OBJ_173 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "instantsearch-telemetry-native::InstantSearchTelemetryTests" /* InstantSearchTelemetryTests */;
+			targetProxy = 40328699282C0F7400F340EF /* PBXContainerItemProxy */;
+		};
+		OBJ_185 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "instantsearch-telemetry-native::InstantSearchTelemetry" /* InstantSearchTelemetry */;
+			targetProxy = 40328695282C0F6E00F340EF /* PBXContainerItemProxy */;
+		};
+		OBJ_186 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "gzipswift::Gzip" /* Gzip */;
+			targetProxy = 40328696282C0F6E00F340EF /* PBXContainerItemProxy */;
+		};
+		OBJ_187 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "gzipswift::system-zlib" /* system-zlib */;
+			targetProxy = 40328697282C0F6E00F340EF /* PBXContainerItemProxy */;
+		};
+		OBJ_188 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "swift-protobuf::SwiftProtobuf" /* SwiftProtobuf */;
+			targetProxy = 40328698282C0F6E00F340EF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		OBJ_134 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DRIVERKIT_DEPLOYMENT_TARGET = 19.0;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/GzipSwift/Sources/system-zlib/include",
+				);
+				INFOPLIST_FILE = InstantSearchTelemetry.xcodeproj/Gzip_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/.build/checkouts/GzipSwift/Sources/system-zlib/include/module.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = Gzip;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = Gzip;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_135 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DRIVERKIT_DEPLOYMENT_TARGET = 19.0;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/GzipSwift/Sources/system-zlib/include",
+				);
+				INFOPLIST_FILE = InstantSearchTelemetry.xcodeproj/Gzip_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/.build/checkouts/GzipSwift/Sources/system-zlib/include/module.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = Gzip;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = Gzip;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		OBJ_144 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/ManifestAPI -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -package-description-version 5.0.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		OBJ_145 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/ManifestAPI -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -package-description-version 5.0.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		OBJ_150 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/GzipSwift/Sources/system-zlib/include",
+				);
+				INFOPLIST_FILE = InstantSearchTelemetry.xcodeproj/InstantSearchTelemetry_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/.build/checkouts/GzipSwift/Sources/system-zlib/include/module.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = InstantSearchTelemetry;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = InstantSearchTelemetry;
+			};
+			name = Debug;
+		};
+		OBJ_151 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/GzipSwift/Sources/system-zlib/include",
+				);
+				INFOPLIST_FILE = InstantSearchTelemetry.xcodeproj/InstantSearchTelemetry_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/.build/checkouts/GzipSwift/Sources/system-zlib/include/module.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = InstantSearchTelemetry;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = InstantSearchTelemetry;
+			};
+			name = Release;
+		};
+		OBJ_165 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/ManifestAPI -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -package-description-version 5.5.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		OBJ_166 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/ManifestAPI -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -package-description-version 5.5.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		OBJ_171 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_172 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_176 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DRIVERKIT_DEPLOYMENT_TARGET = 19.0;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/GzipSwift/Sources/system-zlib/include",
+				);
+				INFOPLIST_FILE = InstantSearchTelemetry.xcodeproj/InstantSearchTelemetryTests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/.build/checkouts/GzipSwift/Sources/system-zlib/include/module.modulemap";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = InstantSearchTelemetryTests;
+				TVOS_DEPLOYMENT_TARGET = 14.0;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Debug;
+		};
+		OBJ_177 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DRIVERKIT_DEPLOYMENT_TARGET = 19.0;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/GzipSwift/Sources/system-zlib/include",
+				);
+				INFOPLIST_FILE = InstantSearchTelemetry.xcodeproj/InstantSearchTelemetryTests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/.build/checkouts/GzipSwift/Sources/system-zlib/include/module.modulemap";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = InstantSearchTelemetryTests;
+				TVOS_DEPLOYMENT_TARGET = 14.0;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Release;
+		};
+		OBJ_190 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = InstantSearchTelemetry.xcodeproj/SwiftProtobuf_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftProtobuf;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = SwiftProtobuf;
+			};
+			name = Debug;
+		};
+		OBJ_191 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = InstantSearchTelemetry.xcodeproj/SwiftProtobuf_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftProtobuf;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = SwiftProtobuf;
+			};
+			name = Release;
+		};
+		OBJ_280 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/ManifestAPI -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -package-description-version 4.2.0";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		OBJ_281 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/ManifestAPI -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -package-description-version 4.2.0";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		OBJ_285 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = NO;
+				DRIVERKIT_DEPLOYMENT_TARGET = 19.0;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/GzipSwift/Sources/system-zlib/include",
+				);
+				INFOPLIST_FILE = InstantSearchTelemetry.xcodeproj/system_zlib_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "system-zlib";
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				TARGET_NAME = "system-zlib";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_286 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = NO;
+				DRIVERKIT_DEPLOYMENT_TARGET = 19.0;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/GzipSwift/Sources/system-zlib/include",
+				);
+				INFOPLIST_FILE = InstantSearchTelemetry.xcodeproj/system_zlib_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "system-zlib";
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				TARGET_NAME = "system-zlib";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+					"DEBUG=1",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "$(AVAILABLE_PLATFORMS)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE DEBUG";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "$(AVAILABLE_PLATFORMS)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		OBJ_133 /* Build configuration list for PBXNativeTarget "Gzip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_134 /* Debug */,
+				OBJ_135 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_143 /* Build configuration list for PBXNativeTarget "GzipPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_144 /* Debug */,
+				OBJ_145 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_149 /* Build configuration list for PBXNativeTarget "InstantSearchTelemetry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_150 /* Debug */,
+				OBJ_151 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_164 /* Build configuration list for PBXNativeTarget "InstantSearchTelemetryPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_165 /* Debug */,
+				OBJ_166 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_170 /* Build configuration list for PBXAggregateTarget "InstantSearchTelemetryPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_171 /* Debug */,
+				OBJ_172 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_175 /* Build configuration list for PBXNativeTarget "InstantSearchTelemetryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_176 /* Debug */,
+				OBJ_177 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_189 /* Build configuration list for PBXNativeTarget "SwiftProtobuf" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_190 /* Debug */,
+				OBJ_191 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_2 /* Build configuration list for PBXProject "InstantSearchTelemetry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_279 /* Build configuration list for PBXNativeTarget "SwiftProtobufPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_280 /* Debug */,
+				OBJ_281 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_284 /* Build configuration list for PBXNativeTarget "system-zlib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_285 /* Debug */,
+				OBJ_286 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = OBJ_1 /* Project object */;
+}
