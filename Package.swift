@@ -13,7 +13,8 @@ let package = Package(
     dependencies: [
       .package(name: "SwiftProtobuf",
                url: "https://github.com/apple/swift-protobuf.git",
-               .revision("b9ec2c47e74f6bcf00af27772818ee034a6c6c25")),
+               from: "1.19.0"),
+      //.revision("b9ec2c47e74f6bcf00af27772818ee034a6c6c25")
       .package(name: "Gzip",
                url: "https://github.com/1024jp/GzipSwift",
                from: "5.2.0")
