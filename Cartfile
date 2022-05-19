@@ -1,1 +1,1 @@
-github "apple/swift-protobuf" ~> 1.19 #"b9ec2c4"
+#github "apple/swift-protobuf" "b9ec2c4" #~> 1.19
