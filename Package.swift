@@ -5,12 +5,6 @@ import PackageDescription
 
 let package = Package(
     name: "InstantSearchTelemetry",
-    platforms: [
-      .iOS(.v9),
-      .macOS(.v10_10),
-      .watchOS(.v2),
-      .tvOS(.v9)
-    ],
     products: [
         .library(
             name: "InstantSearchTelemetry",
@@ -19,15 +13,12 @@ let package = Package(
     dependencies: [
       .package(name: "SwiftProtobuf",
                url: "https://github.com/apple/swift-protobuf.git",
-               from: "1.6.0"),
-      .package(name: "Gzip",
-               url: "https://github.com/1024jp/GzipSwift",
-               from: "5.1.0")
+               .revision("b9ec2c47e74f6bcf00af27772818ee034a6c6c25")),
     ],
     targets: [
         .target(
             name: "InstantSearchTelemetry",
-            dependencies: ["SwiftProtobuf", "Gzip"]),
+            dependencies: ["SwiftProtobuf"]),
         .testTarget(
             name: "InstantSearchTelemetryTests",
             dependencies: ["InstantSearchTelemetry"]),

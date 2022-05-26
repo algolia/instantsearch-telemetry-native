@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Gzip
 
 public typealias TelemetryComponent = Com_Algolia_Instantsearch_Telemetry_Component
 public typealias TelemetryComponentType = Com_Algolia_Instantsearch_Telemetry_ComponentType

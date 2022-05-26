@@ -16,8 +16,8 @@ import SwiftProtobuf
 // Please ensure that you are building against the same version of the API
 // that was used to generate this file.
 fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAPIVersionCheck {
-  struct _2: SwiftProtobuf.ProtobufAPIVersion_2 {}
-  typealias Version = _2
+  struct _3: SwiftProtobuf.ProtobufAPIVersion_3 {}
+  typealias Version = _3
 }
 
 /// serial name 'ComponentType'
@@ -124,14 +124,6 @@ public enum Com_Algolia_Instantsearch_Telemetry_ComponentType: SwiftProtobuf.Enu
   }
 
 }
-
-#if swift(>=4.2)
-
-extension Com_Algolia_Instantsearch_Telemetry_ComponentType: CaseIterable {
-  // Support synthesized by the compiler.
-}
-
-#endif  // swift(>=4.2)
 
 /// serial name 'ComponentParam'
 public enum Com_Algolia_Instantsearch_Telemetry_ComponentParam: SwiftProtobuf.Enum {
@@ -289,14 +281,6 @@ public enum Com_Algolia_Instantsearch_Telemetry_ComponentParam: SwiftProtobuf.En
 
 }
 
-#if swift(>=4.2)
-
-extension Com_Algolia_Instantsearch_Telemetry_ComponentParam: CaseIterable {
-  // Support synthesized by the compiler.
-}
-
-#endif  // swift(>=4.2)
-
 /// serial name 'com.algolia.instantsearch.telemetry.Schema'
 public struct Com_Algolia_Instantsearch_Telemetry_Schema {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
@@ -345,6 +329,11 @@ public struct Com_Algolia_Instantsearch_Telemetry_Component {
   fileprivate var _type: Com_Algolia_Instantsearch_Telemetry_ComponentType? = nil
   fileprivate var _isConnector: Bool? = nil
 }
+
+#if swift(>=5.5) && canImport(_Concurrency)
+extension Com_Algolia_Instantsearch_Telemetry_Schema: @unchecked Sendable {}
+extension Com_Algolia_Instantsearch_Telemetry_Component: @unchecked Sendable {}
+#endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
