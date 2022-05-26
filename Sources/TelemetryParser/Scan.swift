@@ -14,6 +14,9 @@ struct Scan: ParsableCommand {
   @Argument(help: "file path")
   var filePath: String
     
+  @Flag
+  var raw = false
+  
   func run() throws {
     var collector = TelemetryReducer()
     let scanner = FileScanner(filePath: filePath)
@@ -25,17 +28,19 @@ struct Scan: ParsableCommand {
           collector.assign(schema: schema, forApplicationID: appID)
       }
     }
-    print(collector.description)
+    if raw {
+      print(collector.description)
+    } else {
+      print(collector.stats)
+    }
   }
     
   func parseApplicationID(from string: String) -> String? {
     return string.split(separator: ",").first.flatMap(String.init)
   }
   
-  static let telemetryExtractor: RegexExtractor = "ISTelemetry\\((?<telemetry>.+)\\)"
-
   func parseTelemetry(from string: String) -> String? {
-    return Scan.telemetryExtractor(string, rangeName: "telemetry").first
+    return string.split(separator: ",").last.flatMap(String.init)
   }
     
   enum Error: Swift.Error {

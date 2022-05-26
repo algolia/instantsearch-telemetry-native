@@ -42,7 +42,7 @@ extension TelemetryReducer {
 extension TelemetryReducer.Component: CustomStringConvertible {
   
   var description: String {
-    (["\(name)", (isConnector ? "connector" : "")].filter { !$0.isEmpty } + parameters.sorted()).joined(separator: " ")
+    (["\(name)", (isConnector ? "1" : "0")].filter { !$0.isEmpty } + parameters.sorted()).joined(separator: ",")
   }
     
 }
