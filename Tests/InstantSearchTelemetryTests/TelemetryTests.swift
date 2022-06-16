@@ -32,5 +32,10 @@ final class TelemetryTests: XCTestCase {
     telemetry.trace(type: .facetList, parameters: .facets)
     XCTAssertTrue(telemetry.components.isEmpty)
   }
+  
+  func testDecode() throws {
+    let string = "H4sIAAAAAAAAE3ukzXNAVfCEKt8JVZkLqgyPtNkOqIpcUGUEAJ/elTUYAAAA"
+    let _ = try TelemetrySchema(gzippedBase64String: string)
+  }
 
 }
