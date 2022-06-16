@@ -23,9 +23,6 @@ let package = Package(
       .package(name: "SwiftProtobuf",
                url: "https://github.com/apple/swift-protobuf.git",
                from: "1.6.0"),
-      .package(name: "Gzip",
-               url: "https://github.com/1024jp/GzipSwift",
-               from: "5.1.0"),
       .package(name: "swift-argument-parser",
                url: "https://github.com/apple/swift-argument-parser",
                from: "1.0.0"),
@@ -33,7 +30,7 @@ let package = Package(
     targets: [
         .target(
             name: "InstantSearchTelemetry",
-            dependencies: ["SwiftProtobuf", "Gzip"]),
+            dependencies: ["SwiftProtobuf"]),
         .executableTarget(
             name: "TelemetryParser",
             dependencies: [
