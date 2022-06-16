@@ -71,4 +71,9 @@ final class TelemetryTests: XCTestCase {
     }
   }
   
+  func testDecode() throws {
+    let string = "H4sIAAAAAAAAE3ukzXNAVfCEKt8JVZkLqgyPtNkOqIpcUGUEAJ/elTUYAAAA"
+    let _ = try TelemetrySchema(gzippedBase64String: string)
+  }
+
 }
