@@ -7,7 +7,7 @@ let package = Package(
     name: "InstantSearchTelemetry",
     platforms: [
       .iOS(.v9),
-      .macOS(.v10_13),
+      .macOS(.v10_11),
       .watchOS(.v2),
       .tvOS(.v9)
     ],
@@ -22,10 +22,10 @@ let package = Package(
     dependencies: [
       .package(name: "SwiftProtobuf",
                url: "https://github.com/apple/swift-protobuf.git",
-               from: "1.6.0"),
+               from: "1.19.0"),
       .package(name: "swift-argument-parser",
                url: "https://github.com/apple/swift-argument-parser",
-               from: "1.0.0"),
+               from: "1.1.0"),
     ],
     targets: [
         .target(
