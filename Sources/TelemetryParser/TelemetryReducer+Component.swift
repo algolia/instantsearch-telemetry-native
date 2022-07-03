@@ -15,24 +15,20 @@ extension TelemetryReducer {
     let name: String
     let isConnector: Bool
     let parameters: Set<String>
+    let userAgent: UserAgent
     
-    init(name: String, isConnector: Bool, parameters: Set<String>) {
+    init(name: String, isConnector: Bool, parameters: Set<String>, userAgent: String) {
       self.name = name
       self.isConnector = isConnector
       self.parameters = parameters
+      self.userAgent = UserAgent(rawValue: userAgent)
     }
 
-    init(_ telemetryComponent: TelemetryComponent) {
+    init(_ telemetryComponent: TelemetryComponent, userAgent: String) {
       self.init(name: "\(telemetryComponent.type)",
                 isConnector: telemetryComponent.isConnector,
-                parameters: Set(telemetryComponent.parameters.map { "\($0)" }))
-    }
-      
-    func merging(_ component: Component) -> Component {
-      guard component.name == name else { fatalError() }
-      let isConnector = isConnector || component.isConnector
-      let parameters = parameters.union(component.parameters)
-      return Component(name: name, isConnector: isConnector, parameters: parameters)
+                parameters: Set(telemetryComponent.parameters.map { "\($0)" }),
+                userAgent: userAgent)
     }
     
   }
@@ -42,7 +38,9 @@ extension TelemetryReducer {
 extension TelemetryReducer.Component: CustomStringConvertible {
   
   var description: String {
-    (["\(name)", (isConnector ? "1" : "0")].filter { !$0.isEmpty } + parameters.sorted()).joined(separator: ",")
+    let isConnectorString = isConnector ? "1" : "0"
+    let paramsString = parameters.sorted().joined(separator: ",")
+    return "\(name),\(isConnectorString),\"\(paramsString)\",\(userAgent.description)"
   }
     
 }

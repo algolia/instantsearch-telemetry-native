@@ -15,18 +15,18 @@ struct FileScanner {
     self.filePath = filePath
   }
   
-  func callAsFunction(stringProcessor: (String) -> Void) {
+  func callAsFunction(stringProcessor: (Int, String) -> Void) throws {
     let fileURL = URL(fileURLWithPath: filePath)
     
     // make sure the file exists
     guard FileManager.default.fileExists(atPath: fileURL.path) else {
-      preconditionFailure("file expected at \(fileURL.absoluteString) is missing")
+      throw FileError.fileNotFound(fileURL.absoluteString)
     }
     
     // open the file for reading
     // note: user should be prompted the first time to allow reading from this location
-    guard let filePointer:UnsafeMutablePointer<FILE> = fopen(fileURL.path, "r") else {
-      preconditionFailure("Could not open file at \(fileURL.absoluteString)")
+    guard let filePointer: UnsafeMutablePointer<FILE> = fopen(fileURL.path, "r") else {
+      throw FileError.fileCannotBeOpen(fileURL.absoluteString)
     }
     
     // a pointer to a null-terminated, UTF-8 encoded sequence of bytes
@@ -43,6 +43,8 @@ struct FileScanner {
     // the smallest multiple of 16 that will fit the byte array for this line
     var lineCap: Int = 0
     
+    var lineNumber: Int = 0
+    
     // initial iteration
     var bytesRead = getline(&lineByteArrayPointer, &lineCap, filePointer)
     while bytesRead > 0 {
@@ -53,10 +55,12 @@ struct FileScanner {
         lineAsString.removeLast()
       }
 
-      stringProcessor(lineAsString)
+      stringProcessor(lineNumber, lineAsString)
             
       // updates number of bytes read, for the next iteration
       bytesRead = getline(&lineByteArrayPointer, &lineCap, filePointer)
+      
+      lineNumber += 1
     }
   }
   

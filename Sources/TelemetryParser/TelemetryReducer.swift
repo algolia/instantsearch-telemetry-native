@@ -11,30 +11,21 @@ import InstantSearchTelemetry
 struct TelemetryReducer {
   
   typealias ApplicationID = String
-  typealias ComponentName = String
   
-  private var data: [ApplicationID: [ComponentName: Component]] = [:]
+  private var data: [ApplicationID: Set<Component>] = [:]
   
-  mutating func assign(schema: TelemetrySchema, forApplicationID applicationID: ApplicationID) {
-    let components = schema.components.map(Component.init)
-    var appComponents = data[applicationID] ?? [:]
-    for component in components {
-      if let existingComponent = appComponents[component.name] {
-        appComponents[component.name] = existingComponent.merging(component)
-      } else {
-        appComponents[component.name] = component
-      }
-    }
-    data[applicationID] = appComponents
+  mutating func assign(schema: TelemetrySchema, userAgents: String?, forApplicationID applicationID: ApplicationID) {
+    let components = schema.components.map { Component($0, userAgent: userAgents ?? "") }
+    data[applicationID] = (data[applicationID] ?? []).union(components)
   }
 }
 
 extension TelemetryReducer: CustomStringConvertible {
   
   var description: String {
-    var output = ""
+    var output = "appId,component,isConnector,params,androidVersion,kotlinClientVersion,androidInstantSearchVersion,iosVersion,swiftClientVersion,iosInstantSearchVersion\n"
     for (appID, components) in data {
-      for (_, component) in components.sorted(by: { $0.key < $1.key }) {
+      for component in components.sorted(by: { $0.name < $1.name }) {
         output += "\(appID),\(component.description)\n"
       }
     }
@@ -90,7 +81,7 @@ extension TelemetryReducer {
     var output = ""
     output.append("total applications count: \(data.count)\n\n")
     var statsDict: [String: ComponentStats] = [:]
-    for component in data.values.flatMap(\.values) {
+    for component in data.values.flatMap({ $0 }) {
       statsDict[component.name] = statsDict[component.name].flatMap { $0.apply(component) } ?? ComponentStats(component)
     }
     let statsOutput = statsDict
