@@ -15,7 +15,7 @@ struct Decode: ParsableCommand {
   var input: String
   
   func run() throws {
-    let components = try TelemetrySchema(gzippedBase64String: input).components.map(TelemetryReducer.Component.init)
+    let components = try TelemetrySchema(gzippedBase64String: input).components.map { TelemetryReducer.Component.init($0, userAgent: "") }
     for component in components {
       print(component.description)
     }

@@ -1,0 +1,1 @@
+SELECT DISTINCT t.application_ID, REGEXP_REPLACE(t.user_agent, '^.*ISTelemetry\\(([A-Za-z0-9\\+/=]+)\\).*$', '$1') as telemetry, REGEXP_REPLACE(t.user_agent, '[ ;,]?ISTelemetry\\(([A-Za-z0-9\\+/=]+)\\)[ ;,]?', '') as user_agents FROM prod_application.active_user_agents as t WHERE t.user_agent LIKE '%ISTelemetry%';
