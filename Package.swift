@@ -15,34 +15,18 @@ let package = Package(
         .library(
             name: "InstantSearchTelemetry",
             targets: ["InstantSearchTelemetry"]),
-        .executable(
-          name: "Parser",
-          targets: ["TelemetryParser"])
     ],
     dependencies: [
       .package(name: "SwiftProtobuf",
                url: "https://github.com/apple/swift-protobuf.git",
                from: "1.19.0"),
-      .package(name: "swift-argument-parser",
-               url: "https://github.com/apple/swift-argument-parser",
-               from: "1.1.0"),
     ],
     targets: [
         .target(
             name: "InstantSearchTelemetry",
             dependencies: ["SwiftProtobuf"]),
-        .executableTarget(
-            name: "TelemetryParser",
-            dependencies: [
-              .product(name: "SwiftProtobuf",
-                       package: "SwiftProtobuf"),
-              .product(name: "ArgumentParser",
-                       package: "swift-argument-parser"),
-              .targetItem(name: "InstantSearchTelemetry",
-                          condition: .none)
-            ]),
         .testTarget(
             name: "InstantSearchTelemetryTests",
-            dependencies: ["InstantSearchTelemetry", "TelemetryParser"]),
+            dependencies: ["InstantSearchTelemetry"]),
     ]
 )
