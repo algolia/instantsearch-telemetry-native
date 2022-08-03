@@ -338,13 +338,30 @@ public struct Com_Algolia_Instantsearch_Telemetry_Component {
   /// Clears the value of `isConnector`. Subsequent reads from it will return its default value.
   public mutating func clearIsConnector() {self._isConnector = nil}
 
+  public var isDeclarative: Bool {
+    get {return _isDeclarative ?? false}
+    set {_isDeclarative = newValue}
+  }
+  /// Returns true if `isDeclarative` has been explicitly set.
+  public var hasIsDeclarative: Bool {return self._isDeclarative != nil}
+  /// Clears the value of `isDeclarative`. Subsequent reads from it will return its default value.
+  public mutating func clearIsDeclarative() {self._isDeclarative = nil}
+
   public var unknownFields = SwiftProtobuf.UnknownStorage()
 
   public init() {}
 
   fileprivate var _type: Com_Algolia_Instantsearch_Telemetry_ComponentType? = nil
   fileprivate var _isConnector: Bool? = nil
+  fileprivate var _isDeclarative: Bool? = nil
 }
+
+#if swift(>=5.5) && canImport(_Concurrency)
+extension Com_Algolia_Instantsearch_Telemetry_ComponentType: @unchecked Sendable {}
+extension Com_Algolia_Instantsearch_Telemetry_ComponentParam: @unchecked Sendable {}
+extension Com_Algolia_Instantsearch_Telemetry_Schema: @unchecked Sendable {}
+extension Com_Algolia_Instantsearch_Telemetry_Component: @unchecked Sendable {}
+#endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
@@ -476,11 +493,13 @@ extension Com_Algolia_Instantsearch_Telemetry_Component: SwiftProtobuf.Message, 
     600: .same(proto: "type"),
     601: .same(proto: "parameters"),
     602: .same(proto: "isConnector"),
+    603: .same(proto: "isDeclarative"),
   ]
 
   public var isInitialized: Bool {
     if self._type == nil {return false}
     if self._isConnector == nil {return false}
+    if self._isDeclarative == nil {return false}
     return true
   }
 
@@ -493,6 +512,7 @@ extension Com_Algolia_Instantsearch_Telemetry_Component: SwiftProtobuf.Message, 
       case 600: try { try decoder.decodeSingularEnumField(value: &self._type) }()
       case 601: try { try decoder.decodeRepeatedEnumField(value: &self.parameters) }()
       case 602: try { try decoder.decodeSingularBoolField(value: &self._isConnector) }()
+      case 603: try { try decoder.decodeSingularBoolField(value: &self._isDeclarative) }()
       default: break
       }
     }
@@ -512,6 +532,9 @@ extension Com_Algolia_Instantsearch_Telemetry_Component: SwiftProtobuf.Message, 
     try { if let v = self._isConnector {
       try visitor.visitSingularBoolField(value: v, fieldNumber: 602)
     } }()
+    try { if let v = self._isDeclarative {
+      try visitor.visitSingularBoolField(value: v, fieldNumber: 603)
+    } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -519,6 +542,7 @@ extension Com_Algolia_Instantsearch_Telemetry_Component: SwiftProtobuf.Message, 
     if lhs._type != rhs._type {return false}
     if lhs.parameters != rhs.parameters {return false}
     if lhs._isConnector != rhs._isConnector {return false}
+    if lhs._isDeclarative != rhs._isDeclarative {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
