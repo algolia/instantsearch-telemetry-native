@@ -17,7 +17,7 @@ message Component {
   required bool isDeclarative = 603;
 }
 
-// serial name 'ComponentType'
+// serial name 'com.algolia.instantsearch.telemetry.ComponentType'
 enum ComponentType {
   Unknown = 0;
   HitsSearcher = 1;
@@ -49,7 +49,7 @@ enum ComponentType {
   FilterList = 27;
 }
 
-// serial name 'ComponentParam'
+// serial name 'com.algolia.instantsearch.telemetry.ComponentParam'
 enum ComponentParam {
   Undefined = 0;
   ApiKey = 1;
