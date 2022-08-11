@@ -56,6 +56,13 @@ public class InstantSearchTelemetry {
     return components[type]
   }
   
+  public func traceDeclarative(type: TelemetryComponentType) {
+    trace(type: type,
+          parameters: [],
+          isConnector: false,
+          isDeclarative: true)
+  }
+  
   public func traceConnector(type: TelemetryComponentType,
                              parameters: TelemetryComponentParams...) {
     traceConnector(type: type,
@@ -72,7 +79,8 @@ public class InstantSearchTelemetry {
                              parameters: [TelemetryComponentParams]) {
     trace(type: type,
           parameters: parameters,
-          isConnector: true)
+          isConnector: true,
+          isDeclarative: true)
   }
   
   public func trace(type: TelemetryComponentType,
@@ -92,22 +100,27 @@ public class InstantSearchTelemetry {
                     parameters: [TelemetryComponentParams]) {
     trace(type: type,
           parameters: parameters,
-          isConnector: false)
+          isConnector: false,
+          isDeclarative: false)
   }
   
   private func trace(type: TelemetryComponentType,
                      parameters: [TelemetryComponentParams],
-                     isConnector: Bool) {
+                     isConnector: Bool,
+                     isDeclarative: Bool) {
     guard isEnabled else { return }
     
     let isExistingComponentConnector: Bool
+    let isExistingComponentDeclarative: Bool
     let existingComponentParameters: [TelemetryComponentParams]
     
     if let existingComponent = components[type] {
       isExistingComponentConnector = existingComponent.isConnector
+      isExistingComponentDeclarative = existingComponent.isDeclarative
       existingComponentParameters = existingComponent.parameters
     } else {
       isExistingComponentConnector = false
+      isExistingComponentDeclarative = false
       existingComponentParameters = []
     }
     
@@ -115,6 +128,7 @@ public class InstantSearchTelemetry {
       $0.type = type
       $0.parameters = Array(Set(parameters).union(existingComponentParameters)).sorted(by: { $0.rawValue < $1.rawValue })
       $0.isConnector = isExistingComponentConnector || isConnector
+      $0.isDeclarative = isExistingComponentDeclarative || isDeclarative
     }
     
     components[type] = component

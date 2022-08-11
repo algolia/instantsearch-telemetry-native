@@ -14,6 +14,7 @@ message Component {
   // WARNING: a default value decoded when value is missing
   repeated ComponentParam parameters = 601;
   required bool isConnector = 602;
+  required bool isDeclarative = 603;
 }
 
 // serial name 'ComponentType'
