@@ -8,7 +8,6 @@ import com.algolia.instantsearch.telemetry.ComponentParam.Undefined
 import com.algolia.instantsearch.telemetry.ComponentType.FacetList
 import com.algolia.instantsearch.telemetry.ComponentType.HitsSearcher
 import com.algolia.instantsearch.telemetry.ComponentType.SearchBox
-import com.algolia.instantsearch.telemetry.internal.DefaultTelemetry
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.test.runTest
 import kotlin.test.Test
@@ -18,7 +17,7 @@ class TelemetryTest {
 
     @Test
     fun schemaBuildTest() = runTest {
-        val telemetry = DefaultTelemetry(scope = this)
+        val telemetry = Telemetry(this)
         telemetry.traceConnector(FacetList, setOf(Facets, SelectionMode))
         telemetry.trace(HitsSearcher, setOf(Client, IndexName, Undefined))
         telemetry.traceConnector(HitsSearcher, setOf(Client, IndexName))

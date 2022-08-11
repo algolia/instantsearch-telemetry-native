@@ -6,7 +6,6 @@ import com.algolia.instantsearch.telemetry.ComponentType
 import com.algolia.instantsearch.telemetry.Schema
 import com.algolia.instantsearch.telemetry.Telemetry
 import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 /**
@@ -14,11 +13,10 @@ import kotlinx.coroutines.launch
  *
  * Read operation are sync, write operations are async (using [scope]).
  */
-internal class DefaultTelemetry(
-    private val scope: CoroutineScope = CoroutineScope(context = Dispatchers.Default.limitedParallelism(1)),
-    private val telemetryComponents: MutableMap<ComponentType, DataContainer> = mutableMapOf(),
-    override var enabled: Boolean = true,
-) : Telemetry {
+internal class DefaultTelemetry(private val scope: CoroutineScope) : Telemetry {
+
+    private val telemetryComponents: MutableMap<ComponentType, DataContainer> = mutableMapOf()
+    override var enabled: Boolean = true
 
     override fun trace(componentType: ComponentType, componentParams: Set<ComponentParam>) {
         traceComponent(componentType = componentType, componentParams = componentParams)
@@ -37,13 +35,15 @@ internal class DefaultTelemetry(
         componentParams: Set<ComponentParam> = emptySet(),
         isConnector: Boolean? = null,
         isDeclarative: Boolean? = null
-    ) = scope.launch {
-        if (!enabled) return@launch
-        val current = telemetryComponents[componentType]
-        val params = mergeParams(current, componentParams)
-        val connector = isConnector ?: current?.isConnector ?: false
-        val declarative = isDeclarative ?: current?.isDeclarative ?: false
-        telemetryComponents[componentType] = DataContainer(params, connector, declarative)
+    ) {
+        if (!enabled) return
+        scope.launch {
+            val current = telemetryComponents[componentType]
+            val params = mergeParams(current, componentParams)
+            val connector = isConnector ?: current?.isConnector ?: false
+            val declarative = isDeclarative ?: current?.isDeclarative ?: false
+            telemetryComponents[componentType] = DataContainer(params, connector, declarative)
+        }
     }
 
     override fun schema(): Schema? {

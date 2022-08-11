@@ -1,6 +1,8 @@
 package com.algolia.instantsearch.telemetry
 
 import com.algolia.instantsearch.telemetry.internal.DefaultTelemetry
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 
 /**
  * Controller to handle components telemetry operations.
@@ -18,8 +20,7 @@ public interface Telemetry : Config {
      * This operation is asynchronous.
      */
     public fun trace(
-        componentType: ComponentType,
-        componentParams: Set<ComponentParam> = emptySet()
+        componentType: ComponentType, componentParams: Set<ComponentParam> = emptySet()
     )
 
     /**
@@ -27,8 +28,7 @@ public interface Telemetry : Config {
      * This operation is asynchronous.
      */
     public fun traceConnector(
-        componentType: ComponentType,
-        componentParams: Set<ComponentParam> = emptySet()
+        componentType: ComponentType, componentParams: Set<ComponentParam> = emptySet()
     )
 
     /**
@@ -48,11 +48,23 @@ public interface Telemetry : Config {
         /**
          * The default instance of [Telemetry].
          */
-        public val shared: Telemetry = Telemetry()
+        @Deprecated(
+            message = "use TelemetryProvider instead",
+            replaceWith = ReplaceWith(
+                "TelemetryProvider.get()",
+                "com.algolia.instantsearch.telemetry.TelemetryProvider"
+            )
+        )
+        public val shared: Telemetry
+            get() = TelemetryProvider.get()
     }
 }
 
 /**
  * Creates an instance of [Telemetry].
+ *
+ * @param scope coroutine scope for async operations
  */
-public fun Telemetry(): Telemetry = DefaultTelemetry()
+public fun Telemetry(
+    scope: CoroutineScope = CoroutineScope(context = Dispatchers.Default.limitedParallelism(1))
+): Telemetry = DefaultTelemetry(scope)

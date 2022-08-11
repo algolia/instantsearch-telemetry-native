@@ -7,7 +7,6 @@ import com.algolia.instantsearch.telemetry.ComponentParam.SelectionMode
 import com.algolia.instantsearch.telemetry.ComponentType.FacetList
 import com.algolia.instantsearch.telemetry.ComponentType.HitsSearcher
 import com.algolia.instantsearch.telemetry.ComponentType.SearchBox
-import com.algolia.instantsearch.telemetry.internal.DefaultTelemetry
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.test.runTest
 import kotlinx.serialization.decodeFromByteArray
@@ -20,7 +19,7 @@ class SerializationTest {
 
     @Test
     fun serializationTest() = runTest {
-        val telemetry = DefaultTelemetry(scope = this)
+        val telemetry = Telemetry(this)
         telemetry.trace(HitsSearcher, setOf(Client, IndexName))
         telemetry.traceConnector(FacetList, setOf(Facets, SelectionMode))
         telemetry.traceDeclarative(SearchBox)

@@ -7,7 +7,7 @@ coroutines = "1.6.4"
 kotlinx-serialization-protobuf = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-protobuf", version.ref = "serialization" }
 kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
 kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines" }
-
+kotlinx-atomicfu = { group = "org.jetbrains.kotlinx", name = "atomicfu", version = "0.18.3" }
 # test
 test-kotlin-common = { module = "org.jetbrains.kotlin:kotlin-test-common" }
 test-kotlin-annotations = { module = "org.jetbrains.kotlin:kotlin-test-annotations-common" }
