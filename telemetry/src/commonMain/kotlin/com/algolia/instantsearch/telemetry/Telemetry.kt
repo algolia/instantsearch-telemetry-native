@@ -1,6 +1,7 @@
 package com.algolia.instantsearch.telemetry
 
 import com.algolia.instantsearch.telemetry.internal.DefaultTelemetry
+import com.algolia.instantsearch.telemetry.internal.DefaultTelemetryProvider
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 
@@ -43,21 +44,7 @@ public interface Telemetry : Config {
      */
     public fun clear()
 
-    public companion object {
-
-        /**
-         * The default instance of [Telemetry].
-         */
-        @Deprecated(
-            message = "use TelemetryProvider instead",
-            replaceWith = ReplaceWith(
-                "TelemetryProvider.get()",
-                "com.algolia.instantsearch.telemetry.TelemetryProvider"
-            )
-        )
-        public val shared: Telemetry
-            get() = TelemetryProvider.get()
-    }
+    public companion object : TelemetryProvider by DefaultTelemetryProvider
 }
 
 /**
