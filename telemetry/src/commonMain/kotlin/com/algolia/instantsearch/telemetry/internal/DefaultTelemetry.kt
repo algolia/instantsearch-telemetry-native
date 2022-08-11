@@ -5,33 +5,45 @@ import com.algolia.instantsearch.telemetry.ComponentParam
 import com.algolia.instantsearch.telemetry.ComponentType
 import com.algolia.instantsearch.telemetry.Schema
 import com.algolia.instantsearch.telemetry.Telemetry
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 /**
  * Default [Telemetry] implementation.
+ *
+ * Read operation are sync, write operations are async (using [scope]).
  */
-internal class DefaultTelemetry : Telemetry {
-
-    override var enabled: Boolean = true
-    private val telemetryComponents = mutableMapOf<ComponentType, DataContainer>()
+internal class DefaultTelemetry(
+    private val scope: CoroutineScope = CoroutineScope(context = Dispatchers.Default.limitedParallelism(1)),
+    private val telemetryComponents: MutableMap<ComponentType, DataContainer> = mutableMapOf(),
+    override var enabled: Boolean = true,
+) : Telemetry {
 
     override fun trace(componentType: ComponentType, componentParams: Set<ComponentParam>) {
-        if (!enabled) return
-        val current = telemetryComponents[componentType]
-        val params = mergeParams(current, componentParams)
-        val isConnector = current?.isConnector ?: false
-        val isDeclarative = current?.isDeclarative ?: false
-        telemetryComponents[componentType] = DataContainer(
-            params = params,
-            isConnector = isConnector,
-            isDeclarative = isDeclarative
-        )
+        traceComponent(componentType = componentType, componentParams = componentParams)
     }
 
     override fun traceConnector(componentType: ComponentType, componentParams: Set<ComponentParam>) {
-        if (!enabled) return
+        traceComponent(componentType = componentType, componentParams = componentParams, isConnector = true)
+    }
+
+    override fun traceDeclarative(componentType: ComponentType) {
+        traceComponent(componentType = componentType, isDeclarative = true)
+    }
+
+    private fun traceComponent(
+        componentType: ComponentType,
+        componentParams: Set<ComponentParam> = emptySet(),
+        isConnector: Boolean? = null,
+        isDeclarative: Boolean? = null
+    ) = scope.launch {
+        if (!enabled) return@launch
         val current = telemetryComponents[componentType]
         val params = mergeParams(current, componentParams)
-        telemetryComponents[componentType] = DataContainer(params = params, isConnector = true, isDeclarative = false);
+        val connector = isConnector ?: current?.isConnector ?: false
+        val declarative = isDeclarative ?: current?.isDeclarative ?: false
+        telemetryComponents[componentType] = DataContainer(params, connector, declarative)
     }
 
     override fun schema(): Schema? {
@@ -43,7 +55,9 @@ internal class DefaultTelemetry : Telemetry {
     }
 
     override fun clear() {
-        telemetryComponents.clear()
+        scope.launch {
+            telemetryComponents.clear()
+        }
     }
 
     private fun mergeParams(current: DataContainer?, componentParams: Set<ComponentParam>): Set<ComponentParam> {
@@ -51,7 +65,7 @@ internal class DefaultTelemetry : Telemetry {
         return componentParams + current.params
     }
 
-    private data class DataContainer(
+    internal data class DataContainer(
         val params: Set<ComponentParam>,
         val isConnector: Boolean,
         val isDeclarative: Boolean,

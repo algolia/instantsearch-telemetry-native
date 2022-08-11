@@ -30,10 +30,16 @@ public interface Telemetry : Config {
     )
 
     /**
+     * Track a component in declarative frameworks by its [ComponentType].
+     */
+    public fun traceDeclarative(
+        componentType: ComponentType
+    )
+
+    /**
      * Clear and remove all components traces.
      */
     public fun clear()
-
 
     public companion object {
 
