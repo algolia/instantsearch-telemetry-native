@@ -5,6 +5,7 @@ import com.algolia.instantsearch.telemetry.ComponentParam
 import com.algolia.instantsearch.telemetry.ComponentType
 import com.algolia.instantsearch.telemetry.Schema
 import com.algolia.instantsearch.telemetry.Telemetry
+import kotlinx.atomicfu.atomic
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
@@ -15,8 +16,9 @@ import kotlinx.coroutines.launch
  */
 internal class DefaultTelemetry(private val scope: CoroutineScope) : Telemetry {
 
-    private val telemetryComponents: MutableMap<ComponentType, DataContainer> = mutableMapOf()
-    override var enabled: Boolean = true
+    private val components: MutableMap<ComponentType, DataContainer> = mutableMapOf()
+    private val _enabled = atomic(true)
+    override var enabled: Boolean by _enabled
 
     override fun trace(componentType: ComponentType, componentParams: Set<ComponentParam>) {
         traceComponent(componentType = componentType, componentParams = componentParams)
@@ -38,17 +40,17 @@ internal class DefaultTelemetry(private val scope: CoroutineScope) : Telemetry {
     ) {
         if (!enabled) return
         scope.launch {
-            val current = telemetryComponents[componentType]
+            val current = components[componentType]
             val params = mergeParams(current, componentParams)
             val connector = isConnector ?: current?.isConnector ?: false
             val declarative = isDeclarative ?: current?.isDeclarative ?: false
-            telemetryComponents[componentType] = DataContainer(params, connector, declarative)
+            components[componentType] = DataContainer(params, connector, declarative)
         }
     }
 
     override fun schema(): Schema? {
         if (!enabled) return null
-        val componentsList = telemetryComponents.map { (type, data) ->
+        val componentsList = components.map { (type, data) ->
             Component(type, data.params, data.isConnector, data.isDeclarative)
         }
         return Schema(componentsList)
@@ -56,16 +58,22 @@ internal class DefaultTelemetry(private val scope: CoroutineScope) : Telemetry {
 
     override fun clear() {
         scope.launch {
-            telemetryComponents.clear()
+            components.clear()
         }
     }
 
+    /**
+     * Merges given [ComponentParam] set with given [DataContainer]'s params.
+     */
     private fun mergeParams(current: DataContainer?, componentParams: Set<ComponentParam>): Set<ComponentParam> {
         if (current == null) return componentParams
         return componentParams + current.params
     }
 
-    internal data class DataContainer(
+    /**
+     * Component Data Container.
+     */
+    private data class DataContainer(
         val params: Set<ComponentParam>,
         val isConnector: Boolean,
         val isDeclarative: Boolean,
