@@ -15,6 +15,7 @@ public interface Telemetry : Config {
 
     /**
      * Track a component by its [ComponentType] and [ComponentParam].
+     * This operation is asynchronous.
      */
     public fun trace(
         componentType: ComponentType,
@@ -23,6 +24,7 @@ public interface Telemetry : Config {
 
     /**
      * Track a component by its [ComponentType] and [ComponentParam].
+     * This operation is asynchronous.
      */
     public fun traceConnector(
         componentType: ComponentType,
@@ -31,13 +33,13 @@ public interface Telemetry : Config {
 
     /**
      * Track a component in declarative frameworks by its [ComponentType].
+     * This operation is asynchronous.
      */
-    public fun traceDeclarative(
-        componentType: ComponentType
-    )
+    public fun traceDeclarative(componentType: ComponentType)
 
     /**
      * Clear and remove all components traces.
+     * This operation is asynchronous.
      */
     public fun clear()
 
