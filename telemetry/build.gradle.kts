@@ -14,19 +14,22 @@ kotlin {
     sourceSets {
         all {
             languageSettings {
-                optIn("kotlin.RequiresOptIn")
                 optIn("kotlinx.serialization.ExperimentalSerializationApi")
+                optIn("kotlinx.coroutines.ExperimentalCoroutinesApi")
             }
         }
         val commonMain by getting {
             dependencies {
+                implementation(libs.kotlinx.coroutines.core)
                 implementation(libs.kotlinx.serialization.protobuf)
+                implementation(libs.kotlinx.atomicfu)
             }
         }
         val commonTest by getting {
             dependencies {
                 implementation(libs.test.kotlin.common)
                 implementation(libs.test.kotlin.annotations)
+                implementation(libs.kotlinx.coroutines.test)
             }
         }
         val jvmTest by getting {
@@ -40,7 +43,6 @@ kotlin {
 configure<SpotlessExtension> {
     kotlin {
         target("**/*.kt")
-        ktlint("0.43.0")
         trimTrailingWhitespace()
         endWithNewline()
     }

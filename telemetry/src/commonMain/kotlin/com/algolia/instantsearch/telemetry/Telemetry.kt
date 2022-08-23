@@ -1,6 +1,9 @@
 package com.algolia.instantsearch.telemetry
 
 import com.algolia.instantsearch.telemetry.internal.DefaultTelemetry
+import com.algolia.instantsearch.telemetry.internal.DefaultTelemetryProvider
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 
 /**
  * Controller to handle components telemetry operations.
@@ -15,36 +18,40 @@ public interface Telemetry : Config {
 
     /**
      * Track a component by its [ComponentType] and [ComponentParam].
+     * This operation is asynchronous.
      */
     public fun trace(
-        componentType: ComponentType,
-        componentParams: Set<ComponentParam> = emptySet()
+        componentType: ComponentType, componentParams: Set<ComponentParam> = emptySet()
     )
 
     /**
      * Track a component by its [ComponentType] and [ComponentParam].
+     * This operation is asynchronous.
      */
     public fun traceConnector(
-        componentType: ComponentType,
-        componentParams: Set<ComponentParam> = emptySet()
+        componentType: ComponentType, componentParams: Set<ComponentParam> = emptySet()
     )
 
     /**
+     * Track a component in declarative frameworks by its [ComponentType].
+     * This operation is asynchronous.
+     */
+    public fun traceDeclarative(componentType: ComponentType)
+
+    /**
      * Clear and remove all components traces.
+     * This operation is asynchronous.
      */
     public fun clear()
 
-
-    public companion object {
-
-        /**
-         * The default instance of [Telemetry].
-         */
-        public val shared: Telemetry = Telemetry()
-    }
+    public companion object : TelemetryProvider by DefaultTelemetryProvider
 }
 
 /**
  * Creates an instance of [Telemetry].
+ *
+ * @param scope coroutine scope for async operations
  */
-public fun Telemetry(): Telemetry = DefaultTelemetry()
+public fun Telemetry(
+    scope: CoroutineScope = CoroutineScope(context = Dispatchers.Default.limitedParallelism(1))
+): Telemetry = DefaultTelemetry(scope)
