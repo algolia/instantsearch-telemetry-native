@@ -8,5 +8,5 @@ public data class Component(
     @ProtoNumber(600) val type: ComponentType,
     @ProtoNumber(601) val parameters: Set<ComponentParam> = emptySet(),
     @ProtoNumber(602) val isConnector: Boolean,
-    @ProtoNumber(603) val isDeclarative: Boolean,
+    @ProtoNumber(603) val isDeclarative: Boolean?,
 )

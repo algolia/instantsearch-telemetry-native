@@ -499,7 +499,6 @@ extension Com_Algolia_Instantsearch_Telemetry_Component: SwiftProtobuf.Message, 
   public var isInitialized: Bool {
     if self._type == nil {return false}
     if self._isConnector == nil {return false}
-    if self._isDeclarative == nil {return false}
     return true
   }
 
