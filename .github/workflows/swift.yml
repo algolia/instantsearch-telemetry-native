@@ -1,7 +1,5 @@
 name: Swift
-
 on: [pull_request]
-
 jobs:
   test:
     runs-on: macos-11
