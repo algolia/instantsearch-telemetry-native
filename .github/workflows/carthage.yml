@@ -1,0 +1,15 @@
+name: Carthage
+on: [pull_request]
+jobs:
+  check:
+    runs-on: macos-11
+    steps:
+     - name: Select Xcode version
+       run: sudo xcode-select -s '/Applications/Xcode_13.2.app/Contents/Developer'
+     - name: Initialize Cartfile
+       run: |
+        pwd
+        ls
+        tee Cartfile <<<"github \"algolia/instantsearch-telemetry-native\" \"${{ github.head_ref }}\""
+        carthage update --no-build
+        carthage build --use-xcframeworks --platform ios
