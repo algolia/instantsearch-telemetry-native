@@ -8,14 +8,13 @@
 import Foundation
 
 extension Data {
-  
+
   func gzipped() -> Data {
     Gzip.gzipCompress(self)
   }
-    
+
   func gunzipped() throws -> Data {
     try Gzip.gzipDecomress(self)
   }
-  
-}
 
+}
