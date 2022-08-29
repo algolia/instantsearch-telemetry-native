@@ -14,10 +14,10 @@ message Component {
   // WARNING: a default value decoded when value is missing
   repeated ComponentParam parameters = 601;
   required bool isConnector = 602;
-  required bool isDeclarative = 603;
+  optional bool isDeclarative = 603;
 }
 
-// serial name 'com.algolia.instantsearch.telemetry.ComponentType'
+// serial name 'ComponentType'
 enum ComponentType {
   Unknown = 0;
   HitsSearcher = 1;
@@ -49,7 +49,7 @@ enum ComponentType {
   FilterList = 27;
 }
 
-// serial name 'com.algolia.instantsearch.telemetry.ComponentParam'
+// serial name 'ComponentParam'
 enum ComponentParam {
   Undefined = 0;
   ApiKey = 1;
