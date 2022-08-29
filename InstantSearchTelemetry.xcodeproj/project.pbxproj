@@ -120,28 +120,28 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4095C93828BD65220075B924 /* PBXContainerItemProxy */ = {
+		4095C93C28BD79FB0075B924 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "swift-protobuf::SwiftProtobuf";
 			remoteInfo = SwiftProtobuf;
 		};
-		4095C93928BD65230075B924 /* PBXContainerItemProxy */ = {
+		4095C93D28BD79FC0075B924 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "instantsearch-telemetry-native::InstantSearchTelemetry";
 			remoteInfo = InstantSearchTelemetry;
 		};
-		4095C93A28BD65230075B924 /* PBXContainerItemProxy */ = {
+		4095C93E28BD79FC0075B924 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "swift-protobuf::SwiftProtobuf";
 			remoteInfo = SwiftProtobuf;
 		};
-		4095C93B28BD65230075B924 /* PBXContainerItemProxy */ = {
+		4095C93F28BD79FC0075B924 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
@@ -743,22 +743,22 @@
 		OBJ_140 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "swift-protobuf::SwiftProtobuf" /* SwiftProtobuf */;
-			targetProxy = 4095C93828BD65220075B924 /* PBXContainerItemProxy */;
+			targetProxy = 4095C93C28BD79FB0075B924 /* PBXContainerItemProxy */;
 		};
 		OBJ_152 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "instantsearch-telemetry-native::InstantSearchTelemetryTests" /* InstantSearchTelemetryTests */;
-			targetProxy = 4095C93B28BD65230075B924 /* PBXContainerItemProxy */;
+			targetProxy = 4095C93F28BD79FC0075B924 /* PBXContainerItemProxy */;
 		};
 		OBJ_162 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "instantsearch-telemetry-native::InstantSearchTelemetry" /* InstantSearchTelemetry */;
-			targetProxy = 4095C93928BD65230075B924 /* PBXContainerItemProxy */;
+			targetProxy = 4095C93D28BD79FC0075B924 /* PBXContainerItemProxy */;
 		};
 		OBJ_163 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "swift-protobuf::SwiftProtobuf" /* SwiftProtobuf */;
-			targetProxy = 4095C93A28BD65230075B924 /* PBXContainerItemProxy */;
+			targetProxy = 4095C93E28BD79FC0075B924 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
