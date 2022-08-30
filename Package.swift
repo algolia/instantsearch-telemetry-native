@@ -19,7 +19,7 @@ let package = Package(
     dependencies: [
       .package(name: "SwiftProtobuf",
                url: "https://github.com/apple/swift-protobuf.git",
-               from: "1.19.0")
+               from: "1.20.0")
     ],
     targets: [
         .target(
