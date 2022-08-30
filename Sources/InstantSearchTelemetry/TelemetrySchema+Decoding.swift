@@ -14,7 +14,7 @@ public enum TelemetrySchemaDecodingError: Error {
 }
 
 extension TelemetrySchemaDecodingError: LocalizedError {
-  
+
   public var errorDescription: String? {
     switch self {
     case .base64DecodingFailure:
@@ -25,29 +25,28 @@ extension TelemetrySchemaDecodingError: LocalizedError {
       return "Unzip failed: \(error.localizedDescription)"
     }
   }
-  
+
 }
 
-
 public extension TelemetrySchema {
-  
+
   init(gzippedBase64String input: String) throws {
     guard let compressedData = Data(base64Encoded: input) else {
       throw TelemetrySchemaDecodingError.base64DecodingFailure
     }
-    
+
     let uncompressedData: Data
     do {
       uncompressedData = try compressedData.gunzipped()
     } catch let unzipError {
       throw TelemetrySchemaDecodingError.unzipFailure(unzipError)
     }
-    
+
     do {
       self = try TelemetrySchema(serializedData: uncompressedData)
     } catch let deserializationError {
       throw TelemetrySchemaDecodingError.deserializationError(deserializationError)
     }
   }
-  
+
 }
