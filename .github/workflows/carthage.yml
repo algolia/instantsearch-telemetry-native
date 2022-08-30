@@ -8,8 +8,7 @@ jobs:
        run: sudo xcode-select -s '/Applications/Xcode_13.2.app/Contents/Developer'
      - name: Initialize Cartfile
        run: |
-        pwd
-        ls
+        echo ${{ github.head_ref }}
         tee Cartfile <<<"github \"algolia/instantsearch-telemetry-native\" \"${{ github.head_ref }}\""
         carthage update --no-build
         cd ./Carthage/Checkouts/instantsearch-telemetry-native
