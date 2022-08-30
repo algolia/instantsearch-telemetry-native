@@ -12,4 +12,7 @@ jobs:
         ls
         tee Cartfile <<<"github \"algolia/instantsearch-telemetry-native\" \"${{ github.head_ref }}\""
         carthage update --no-build
+        cd ./Carthage/Checkouts/instantsearch-telemetry-native
+        swift package generate-xcodeproj
+        cd ../../..
         carthage build --use-xcframeworks --platform ios
